@@ -1,0 +1,101 @@
+.landingDiv {
+    min-height: fit-content;
+    box-sizing: border-box;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.topLeft, .topRight {
+    width: 48%;
+    height: 300px;
+    margin: 5px;
+    background-color: white;
+    
+}
+
+.green1, .green2 {
+    background-color: #33EFA0;;
+    border-radius: 50%;
+}
+
+.green1 {
+    width: 64px;
+    height: 64px;
+}
+
+.green2 {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: -35px;
+    left: 390px;
+}
+
+.blueText {
+    color: #00AEEF;
+}
+
+.topLeft h1 {
+    color: #2E3192;
+    position: relative;
+    margin: 0 5px;
+    top: -40px;
+    text-align: left;
+    font-family: 'Clash Display';
+    font-size: 3em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.topLeft p {
+    position: relative;
+    margin: 0 5px;
+    top: -15px;
+    text-align: left;
+    z-index: 1;
+    /* font-family: 'Clash Display';
+    font-size: 3em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal; */
+}
+
+.topRight {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+
+.rightTop {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: red;
+    align-self: flex-start;
+}
+
+.rightMid {
+    width: 90%;
+    height: 400px;
+    border-radius: 10px;
+    background-color: #8889a3;
+    position: relative;
+    top: -30px;
+    left: 20px;
+    z-index: 1;
+}
+
+.rightLower {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: blue;
+    align-self: flex-end;
+    position: relative;
+    top: -50px;
+    left: -5px;
+}

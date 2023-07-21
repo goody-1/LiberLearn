@@ -1,0 +1,43 @@
+header {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    /* background-color: #333; */
+    /* justify-content: center; */
+    color: #fff;
+    padding: 10px;
+  }
+
+  nav {
+    width: 40%;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  li {
+    display: inline;
+    margin: 0 10px;
+    list-style-type: none;
+  }
+
+  button {
+    width: 100px;
+    height: 30px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
