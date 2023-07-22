@@ -1,0 +1,21 @@
+
+.mentors {
+    display: flex;
+    width: 25%;
+    height: 80%;
+    padding: 40px 32px 32px 32px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 11px;
+    border: 2px solid var(--outline, #E0E6ED);
+    background: #FFF;
+    box-shadow: 0px 7px 14px 0px #D3DAE2;
+}
+
+.mentors img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+}

@@ -1,0 +1,55 @@
+.landingFive {
+    height: 480px;
+    min-width: 100%;
+    margin-top: 70px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+input {
+    border-radius: 10px;
+    border: 1px solid #5D5B5B;
+    margin-bottom: 40px;
+}
+
+.contactForm {
+    max-width: 95%;
+    box-sizing: border-box;
+}
+
+.fullWidth {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.half1 {
+    width: 48%;
+    float: left;
+
+}
+
+.half2 {
+    width: 48%;
+    float: right;
+}
+
+input[type="submit"] {
+    text-align: center;
+    width: 332px;
+    padding: 10px 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #2E3192;
+    align-self: center;
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}

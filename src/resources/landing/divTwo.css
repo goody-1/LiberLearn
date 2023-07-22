@@ -17,8 +17,14 @@
 .leftOne, .leftTwo {
     width: 49%;
     height: 100%;
+    margin: 5px;
     display: flex;
     flex-direction: column;
+}
+
+.leftOne img, .leftTwoTop img, .leftTwoBottom img {
+    width: 100%;
+    height: 100%;
 }
 
 .leftTwo {
