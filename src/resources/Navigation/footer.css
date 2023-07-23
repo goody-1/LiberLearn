@@ -39,6 +39,11 @@
     font-size: 0.8em;
 }
 
+.footerTopLeft img {
+    width: 250px;
+    margin-top: 20px;
+}
+
 .footerTopRight {
     width: 48%;
     height: 100%;
@@ -49,11 +54,23 @@
     align-items: self-end;
 }
 
+.footerTopRight p {
+    display:flex;
+    align-items:center;
+}
+
+
+.FooterImage {
+width: 20px;
+height: 20px; 
+margin-right: 5px;
+}
 .socialIcons {
     width: 50%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: right;
+    gap: 15px;
 }
 
 .socials {

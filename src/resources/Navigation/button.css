@@ -1,0 +1,16 @@
+.getStarted {
+    display: flex;
+    width: 120px;
+    height: 20px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: #2E3192;
+    text-decoration: none;
+    color: white;
+}
+
+.getStarted:hover {
+    background-color: #00AEEF;
+}

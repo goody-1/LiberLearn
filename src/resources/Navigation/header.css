@@ -1,11 +1,23 @@
 header {
     display: flex;
     align-items: center;
-    width: 90%;
+    width: 100%;
     /* background-color: #333; */
-    /* justify-content: center; */
+    justify-content: center;
     color: #fff;
     padding: 10px;
+    position:fixed;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+  }
+
+  .headerContent {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    color: #fff;
   }
 
   nav {
@@ -40,4 +52,6 @@ header {
     height: 40px;
     margin-right: 10px;
   }
-  
+    .home1 {
+     color: #00AEEF;
+  }

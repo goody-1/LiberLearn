@@ -9,6 +9,15 @@
     box-sizing: border-box;
 }
 
+.landingFour h1 {
+    color: #2E3192;
+    font-family: Clash Display;
+    font-size: 3em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
 
 .mentorsList {
     width: 100%;

@@ -10,10 +10,22 @@
     box-sizing: border-box;
 }
 
+.landingFive h1 {
+    color: #2E3192;
+    text-align: center;
+    font-family: Clash Display;
+    font-size: 3em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+}
+
 input {
     border-radius: 10px;
-    border: 1px solid #5D5B5B;
+    border: 2px solid #5D5B5B;
     margin-bottom: 40px;
+    height: 50px;
 }
 
 .contactForm {
@@ -39,7 +51,7 @@ input {
 
 input[type="submit"] {
     text-align: center;
-    width: 332px;
+    width: 200px;
     padding: 10px 10px;
     justify-content: center;
     align-items: center;
@@ -52,4 +64,11 @@ input[type="submit"] {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    border: none;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    background-color:#4db6f3;
+   
 }

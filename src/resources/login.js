@@ -1,5 +1,6 @@
 // import LandingPage from './landing/LandingPage.js';
 import './login.css';
+// import Button from './Navigation/button'
 
 function Login(props) {
 return (
@@ -26,8 +27,8 @@ function OnboardForm (props) {
                 <label for="password">Password:</label>
                 <input type='password' placeholder='Enter your password' name="password"></input>
 
-                
-            <a href='/courses'>Login</a>
+            {/* <Button url='courses'buttonText='Login'/> */}
+            <a className='btn' href='/courses'>Login</a>
         
             </form>
         </div>

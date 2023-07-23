@@ -1,5 +1,5 @@
 .landingDiv {
-    min-height: fit-content;
+    min-height: 400px;
     box-sizing: border-box;
     width: 100%;
     /* background-color: red; */
@@ -9,10 +9,16 @@
 
 .topLeft, .topRight {
     width: 48%;
-    height: 300px;
+    height: 90%;
     margin: 5px;
     background-color: white;
-    
+}
+
+.topRight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .green1, .green2 {
@@ -65,37 +71,39 @@
 
 .topRight {
     display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    justify-content: space-between;
+    /* flex-direction: column; */
+    align-items: center;
+    /* justify-content: center; */
 }
 
 .rightTop {
-    width: 100px;
-    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
     border-radius: 10px;
-    background-color: red;
-    align-self: flex-start;
+    background-color: #23BDEE;
+    align-self: self-start;
 }
 
 .rightMid {
-    width: 90%;
-    height: 400px;
+    min-width: 90%;
+    min-height: 85%;
     border-radius: 10px;
     background-color: #8889a3;
-    position: relative;
-    top: -30px;
-    left: 20px;
     z-index: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: -80px;
+    left: -5px;
 }
 
 .rightLower {
-    width: 150px;
-    height: 150px;
+    min-width: 150px;
+    min-height: 150px;
     border-radius: 10px;
-    background-color: blue;
-    align-self: flex-end;
+    background-color: #33EFA0;
+    align-self: self-end;
     position: relative;
-    top: -50px;
-    left: -5px;
+    top: -200px;
 }

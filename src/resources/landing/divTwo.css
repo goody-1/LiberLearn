@@ -1,5 +1,5 @@
 .landingTwo {
-    height: 300px;
+    height: 400px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -15,7 +15,7 @@
 }
 
 .leftOne, .leftTwo {
-    width: 49%;
+    width: 48%;
     height: 100%;
     margin: 5px;
     display: flex;
@@ -37,17 +37,64 @@
 .leftTwoTop, .leftTwoBottom {
     width: 100%;
     height: 49%;
-    background-color: blue;
+    /* background-color: blue; */
 }
 
 .twoRightContent {
     height: 80%;
     width: 100%;
+    justify-content: center;
+    border-radius: 9px;
+    text-align: left;
 }
 
-.knowMoreBtn {
-    width: 100px;
+.twoRightContent h1 {
+    color: #2E3192;
+    font-family: Clash Display;
+    font-size: 2.5em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.twoRightContent p {
+    color: #343131;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Poppins;
+    font-size: 0.8em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32.5px; /* 162.5% */
+}
+
+.buttonDivTwo {
+    width: 20%;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.buttonDivTwo a {
+    border-radius: 6px;
+    border: 1px solid #2E3192;
+    color: #2E3192;
+    font-family: Roboto;
+    width: 150px;
     height: 40px;
-    border: 1px solid blue;
-    border: 5px;
+    text-align: center;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: right;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    background-image: url("../Image/blue_arrow-up-right.png");
+}
+.buttonDivTwo a:hover {
+    cursor: pointer;
+    background-color:#2E3192;
+    color: white;
+    background-image: url("../Image/lucide_arrow-up-right.png");
+    background-position: right;
+    background-size: contain;
 }

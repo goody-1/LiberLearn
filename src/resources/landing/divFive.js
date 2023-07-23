@@ -29,7 +29,9 @@ function DivFive() {
           name="message"
           placeholder="Message"
         ></input>
-        <input type="submit" value="Send"></input>
+        <div className="submits">
+          <input type="submit" value="Send"></input>
+        </div>
       </form>
     </div>
   );
