@@ -1,5 +1,5 @@
 .landingFive {
-    height: 480px;
+    height: fit-content;
     min-width: 100%;
     margin-top: 70px;
     padding: 20px;
@@ -18,7 +18,7 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    margin: 0;
+    margin: 0 0 40px 0;
 }
 
 input {
@@ -28,8 +28,16 @@ input {
     height: 50px;
 }
 
+textarea {
+    border-radius: 10px;
+    border: 2px solid #5D5B5B;
+    margin-bottom: 40px;
+    height: 100px;
+}
+
 .contactForm {
-    max-width: 95%;
+    min-width: 95%;
+    margin: 200px o;
     box-sizing: border-box;
 }
 

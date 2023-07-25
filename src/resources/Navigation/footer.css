@@ -1,5 +1,5 @@
 .footer {
-    width: 100%;
+    width: 85%;
     height: 400px;
     background-color: #2E3192;
     display: flex;
@@ -52,6 +52,11 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: self-end;
+}
+
+.footerTopRight h1 {
+    font-family: Clash Display;
+    font-size: 2.5em;
 }
 
 .footerTopRight p {

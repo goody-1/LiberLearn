@@ -4,7 +4,7 @@ import logo from '../Image/Logo & Mark Dark.png'
 import Button from "../Navigation/button";
 
 
-function Header () {
+function Header (props) {
   return (
     <header>
       <div className="headerContent">
@@ -14,10 +14,10 @@ function Header () {
         </div>
         <nav>
           <ul>
-            <li className='home1'>Home</li>
-            <li>About us</li>
-            <li>Courses</li>
-            <li>Contact</li>
+            <li className={props.homeActive}>Home</li>
+            <li className={props.aboutActive}>About us</li>
+            <li className={props.coursesActive}>Courses</li>
+            <li className={props.contactActive}>Contact</li>
           </ul>
         </nav>
         <Button url="login" buttonText="Login" />

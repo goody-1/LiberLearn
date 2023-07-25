@@ -23,12 +23,12 @@ function DivFive() {
           name="email"
           placeholder="Email"
         ></input>
-        <input
+        <textarea
           className="fullWidth"
           type="text"
           name="message"
           placeholder="Message"
-        ></input>
+        ></textarea>
         <div className="submits">
           <input type="submit" value="Send"></input>
         </div>

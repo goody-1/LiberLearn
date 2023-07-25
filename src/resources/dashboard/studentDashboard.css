@@ -1,0 +1,6 @@
+.studentDashboard {
+width: 100%;
+height: 98%;
+background-color: blue;
+flex-direction:wrap;
+}

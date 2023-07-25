@@ -13,7 +13,7 @@ import DivFive from '../landing/divFive';
 function LandingPage() {
     return (
         <div className='landingCSS'>
-            <Header />
+            <Header homeActive="homeActive" />
             <div className='landingBody'>
                 <DivOne />
                 <DivTwo />
