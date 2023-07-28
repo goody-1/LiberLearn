@@ -28,7 +28,7 @@ function OnboardForm (props) {
                 <input type='password' placeholder='Enter your password' name="password"></input>
 
             {/* <Button url='courses'buttonText='Login'/> */}
-            <a className='btn' href='/courses'>Login</a>
+            <a className='btn' href='/student-dashboard'>Login</a>
         
             </form>
         </div>

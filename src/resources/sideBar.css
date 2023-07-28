@@ -1,0 +1,42 @@
+section {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+
+
+.sideBarA {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.sideBarAImage {
+width: 180px;
+align-self: center;
+margin-top: 25px;
+margin-bottom: 50px;
+
+}.HOUSE,
+.LIST,
+.HEADSET,
+.SETTING, .ACCOUNT  {
+  height: 20px;
+  width: 20px;
+  margin-right: 8px;
+}
+
+.sideBarA p,.sideBarB p {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  height: 30px;
+  margin-top: 5px;
+}

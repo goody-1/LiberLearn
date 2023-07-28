@@ -37,7 +37,7 @@ function DivTwo () {
 
             <div className="buttonDivTwo">
               <a
-                href="about"
+                href="about-us"
                 // style={{ backgroundImage: `url(${arrowImage})` }}
               >
                 Know More

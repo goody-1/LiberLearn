@@ -5,9 +5,9 @@ import Button from '../Navigation/button';
 function DivOne () {
     return (
         <div className='landingDiv'>
-            <div className='topLeft'>
+            <div className='topLeft1'>
                 <div className='green1'></div>
-                <h1><span className='blueText'>Empowering</span>  Minds, 
+                <h1><span1 className='blueText'>Empowering</span1> Minds, 
                 <br />Shaping <span className='blueText'>Futures</span></h1>
                 <p>We are committed to providing exceptional, <br />learning experience that is
                              engaging, interactive and fun.</p>

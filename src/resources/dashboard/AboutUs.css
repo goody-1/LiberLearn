@@ -1,0 +1,145 @@
+.AboutUsPage {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutActive {
+    color: #00AEEF;
+    font-size:1em;
+}
+
+.AboutUsBody {
+    position: relative;
+    top: 160px;
+    width: 100%;
+    height: 600px;
+    /* display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; */
+    margin-bottom: 225px;
+    /* padding: 50px; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.AboutUse {
+    width: 80%;
+    height: fit-content;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+.AboutUsH1 {
+    color: #2E3192;
+    font-family: Clash Display;
+    font-size: 2.5em;
+    font-style: normal;
+    font-weight:500;
+    line-height: normal;
+    margin:0;
+}
+
+.MissionTag {
+    color: #2E3192;
+    font-family: Clash Display;
+    font-size: 2.5em;
+    font-style: normal;
+    font-weight:500;
+    line-height:normal;
+    margin:0;
+    justify-content: space-between;
+}
+
+.VisionTag {
+    color: #2E3192;
+    font-family: Clash Display;
+    font-size: 2.5em;
+    font-style: normal;
+    font-weight:500;
+    line-height:normal;
+    margin:0;}
+
+.AboutUsH1p {
+font: Poppins;
+font:  rgba(52, 49, 49, 1);
+}
+
+.AboutUsMission {
+    width:80%;
+    height:500px;
+    /* background-color: #44cbe0; */
+    margin-bottom:20px;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    padding:10px;
+    align-items: center;
+    /* box-sizing: border-box; */
+}
+.AboutUsVision {
+    width:80%;
+    height:500px;
+    /* background-color: #e04482; */
+    margin-bottom:20px;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    padding:10px;
+    align-items: center;
+    /* box-sizing: border-box; */
+}
+
+.MissionA{
+width:48%;
+height:100%;
+/* background-color: rgb(231, 216, 62); */
+box-sizing: border-box;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+.MissionB{
+width:48%;
+height:100%;
+/* background-color: rgb(180, 23, 38); */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+box-sizing: border-box;
+}
+.VisionB{
+width:48%;
+height:100%;
+/* background-color: rgb(231, 216, 62); */
+box-sizing: border-box;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+.VisionA{
+width:48%;
+height:100%;
+/* background-color: rgb(23, 146, 180); */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+box-sizing: border-box;
+}
+
+/* .AboutUsVision{
+    width:100%;
+    height:350px;
+    background-color: #543053;
+} */

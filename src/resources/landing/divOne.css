@@ -7,7 +7,7 @@
     justify-content: space-between;
 }
 
-.topLeft, .topRight {
+.topLeft1, .topRight {
     width: 48%;
     height: 90%;
     margin: 5px;
@@ -43,20 +43,21 @@
     color: #00AEEF;
 }
 
-.topLeft h1 {
+.topLeft1 h1 {
     color: #2E3192;
     position: relative;
     margin: 0 5px;
     top: -40px;
     text-align: left;
     font-family: 'Clash Display';
-    font-size: 3em;
+    font-size: 4em;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+
 }
 
-.topLeft p {
+.topLeft1 p {
     position: relative;
     margin: 0 5px;
     top: -15px;

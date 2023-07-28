@@ -1,6 +1,281 @@
-.studentDashboard {
-width: 100%;
-height: 98%;
-background-color: blue;
-flex-direction:wrap;
+.studentDashboardBody {
+  width: 90%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* box-sizing: border-box; */
+}
+
+.leftBodyOO {
+  width: 20%;
+  height: 100%;
+  background: linear-gradient(205.17deg, #2E3192 10.93%, #00AEEF 116.08%);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.rightBody {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(239, 239, 239);
+}
+
+.rightSection {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: rgb(239, 239, 239); */
+  overflow-y: scroll;
+}
+
+.rightBodyTop{
+    height: fit-content;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.ps{
+    height: 5%;
+    width:125%;
+    padding: 1px;
+    box-sizing: border-box;
+    display: flex;
+    /* justify-content: flex-start; */  
+}
+
+.rightBodyMiddle {
+  margin: 20px 0;
+  width: 95%;
+  /* height: 300px; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.courseDetail {
+  width: 250px;
+  height: 159px;
+    background-color: rgb(255, 255, 255);
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.courseDetailing {
+  width: 250px;
+  height: 90px;
+    background-color: rgb(255, 255, 255);
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 4px;
+    /* padding: 5px; */
+    text-align: left;
+    margin: 0;
+    box-sizing: border-box;}
+
+
+.detTop {
+  width: 90%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.detTopI {
+  width: 70%;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  
+}
+
+.detTop p {
+  font-family: Poppins;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0px;
+  text-align: left;
+  margin: 0;
+}
+
+.detTop span {
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+/* .p3{
+  font-family: Poppins;
+  font-size: 5px;
+  font-weight:50;
+  letter-spacing: 0px;
+  text-align: left;
+} */
+
+.detBottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.imageTag {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(239, 181, 181);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.imageTagI {
+  width: 50px;
+  height: 50px;
+  border-radius:25%;
+  background-color: rgb(239, 181, 181);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;}
+
+
+.horizontalBar {
+  height: 5px;
+  background-color: rgb(200, 197, 197);
+  width: 80%;
+  border: 5px;
+}
+
+.horizontalBar div {
+  width: 50%;
+  height: 100%;
+    border: 5px;
+}
+
+.rightBodyLow {
+  width: 95%;
+  height: 65%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: left;
+  padding-bottom: 50px;
+}
+
+.rightBodyLow-Left {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.rightBodyLow-Left>:first-child {
+  display: block;
+  width: 100%;
+}
+
+.rightBodyLow-Right {
+  width: 25%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.componentCourseA {
+    width: 240px;
+    height: 280px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8px;
+    background-color: white;
+    font-family: Poppins;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.infoInsert {
+  width: fit-content;
+  border-radius: 5px;
+  background-color: azure;
+  position: relative;
+  padding: 2px 8px;
+  top: 5px;
+  left: 1px;
+  margin: 0;
+}
+
+.unitDetails p {
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-repeat: no-repeat;
+  background-position: left;
+  margin: 0;
+}
+
+.unitDetails p a {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: right;
+  color: rgba(255, 120, 0, 1);
+  text-decoration: none;
+}
+
+.sp {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight:50px;
+  line-height: 15px;
+  letter-spacing:2%;
+  text-align: right;
+  color:#102844;
+  justify-content: space-between;
+}
+
+.courseImage {
+  padding: 0 5px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 145px;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.courseB-Body {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
 }
