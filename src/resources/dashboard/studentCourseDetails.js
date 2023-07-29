@@ -26,7 +26,8 @@ function StudentCourseDetails() {
             <div className="rightBodyLow-Right">
               <div className="rightContainer">
                 <div className="bottomBorder">
-                  <a href="/enroll" className="enrollBtn">
+                  {/* <a href="/enroll" className="enrollBtn"> */}
+                  <a href="/course-detail-content" className="enrollBtn">
                     Enroll
                   </a>
                 </div>

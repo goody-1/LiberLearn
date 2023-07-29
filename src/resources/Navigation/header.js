@@ -9,7 +9,7 @@ function Header (props) {
     <header>
       <div className="headerContent">
         <div className="logo">
-          <img src={logo} alt="Logo" />
+          <img src={props} alt="Logo" />
           <h1>Landing Page</h1>
         </div>
         <nav>
