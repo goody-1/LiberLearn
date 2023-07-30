@@ -2,6 +2,8 @@ import "./courseDetail_Content.css";
 import SideBar from "../sideBar";
 import TopBar from "../topBar";
 import Button from "../Navigation/button";
+import UI from "../Image/image2/UI.png";
+import MarkUp from "../Image/image2/MarkUp.png";
 
 function CourseDetail_Content() {
   return (
@@ -29,8 +31,13 @@ function CourseDetail_Content() {
                 <h2>Basics Overview</h2>
 
                 <div className="bottomBorder">
-                  <h2>COURSE 1 - INTRODUCTION</h2>
-                  <p>100% positive reviews</p>
+                  <h2>MODULE 1 - INTRODUCTION</h2>
+                  <p>
+                    <img src={UI} alt="UI"></img>Definition of HTML <img src={MarkUp} alt="MarkUp"></img>
+                  </p>
+                  <p>HTML tags and elements</p>
+                  <p>Text formatting and ...</p>
+                  <p>20 Students</p>
                   <p>20 Students</p>
                 </div>
 
@@ -88,8 +95,8 @@ function CourseDetail() {
       </div>
       <article>
         <h2>Course 1 - Introduction</h2>
-        <p>Module 1: HTML fundamentals</p>
-        <p>Module 2: HTML semantic elements </p>
+      
+        <p>Module 2: HTML semantic elements</p>
         <p>You have completed Course 1: Take Assessment</p>
         <h2>Course 2 - CSS Basics</h2>
         <h2>Course 3 - CSS Layouts and Styling</h2>

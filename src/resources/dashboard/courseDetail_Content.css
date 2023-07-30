@@ -192,7 +192,16 @@ article {
 .bottomBorder p {
     text-align: left;
     align-self: flex-start;
+    display: flex;
+    align-items: center;
 }
+.bottomBorder p img {
+  margin-right:10%;
+  width: 80%;
+  
+
+}
+
 
 .rightContainer div > h2 {
     margin: 0;
