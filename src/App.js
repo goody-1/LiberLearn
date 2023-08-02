@@ -39,7 +39,7 @@ function App() {
         {/* <Route path="/trial-link" element={<AssessmentPassed />}></Route> */}
 
         {/* for assessment passed */}
-        <Route path="/trial-link" element={<AssessmentFail />}></Route>
+        {/* <Route path="/trial-link" element={<AssessmentFail />}></Route> */}
       </Routes>
     </div>
   );

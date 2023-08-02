@@ -4,6 +4,15 @@ import TopBar from "../topBar";
 import Button from "../Navigation/button";
 import U1 from "../Image/image2/U1.png";
 import MarkUp from "../Image/image2/MarkUp.png";
+import TU2 from "../Image/image2/TU2.png";
+import TU3 from "../Image/image2/TU3.png";
+import TU4 from "../Image/image2/TU4.png";
+import TU5 from "../Image/image2/TU5.png";
+import TU6 from "../Image/image2/TU6.png";
+import TU7 from "../Image/image2/TU7.png";
+import TU8 from "../Image/image2/TU8.png";
+import Avatar from "../Image/image2/Avatar.png";
+
 
 function CourseDetail_Content() {
   return (
@@ -14,7 +23,7 @@ function CourseDetail_Content() {
 
       <div className="rightBody">
         <div className="rightBodyTop">
-          <TopBar avatar={U1}/>
+          <TopBar avatar={Avatar} />
         </div>
 
         <section className="rightSection">
@@ -41,26 +50,98 @@ function CourseDetail_Content() {
 
                   <p>
                     <span>
-                      <img src={U1} alt="UI"></img>HTML tags and elements
+                      <img src={TU2} alt="UI"></img>HTML tags and elements
                     </span>
                     <img src={MarkUp} alt="MarkUp"></img>
                   </p>
-
-                  <p>Text formatting and ...</p>
-                  <p>20 Students</p>
-                  <p>20 Students</p>
+                  <p>
+                    <span>
+                      <img src={TU3} alt="UI"></img>Text formatting and ...
+                    </span>
+                    <img src={MarkUp} alt="MarkUp"></img>
+                  </p>
+                  <p>
+                    <span>
+                      <img src={TU4} alt="UI"></img>Links and anchor
+                    </span>
+                    <img src={MarkUp} alt="MarkUp"></img>
+                  </p>
+                  <p>
+                    <span>
+                      <img src={TU5} alt="UI"></img>Images and multimedia
+                    </span>
+                    <img src={MarkUp} alt="MarkUp"></img>
+                  </p>
+                  <p>
+                    <span>
+                      <img src={TU6} alt="UI"></img>HTML forms
+                    </span>
+                    <img src={MarkUp} alt="MarkUp"></img>
+                  </p>
+                  <p>
+                    <span>
+                      <img src={TU7} alt="UI"></img>Semantics HTML
+                    </span>
+                    <img src={MarkUp} alt="MarkUp"></img>
+                  </p>
+                  <p>
+                    <span>
+                      <img src={TU8} alt="UI"></img>Tables
+                    </span>
+                    <img src={MarkUp} alt="MarkUp"></img>
+                  </p>
                 </div>
 
                 <div className="bottomBorder">
                   <h2>COURSE 2 - Learn Manufacturing</h2>
-                  <p> Introduction to CSS</p>
-                  <p>CSS selector</p>
-                  <p>CSS properties</p>
-                  <p>CSS box models</p>
-                  <p>Styling</p>
-                  <p>CSS color</p>
-                  <p>CSS Units</p>
-                  <p>CSS transitions</p>
+                  <p>
+                    <span>
+                      <img src={U1} alt="UI"></img>Introduction to CSS
+                    </span>
+                    <img src={MarkUp} alt="MarkUp"></img>
+                  </p>
+                  <p>
+                    <span>
+                      <img src={TU2} alt="UI"></img>CSS selector
+                    </span>
+                    <img src={MarkUp} alt="MarkUp"></img>
+                  </p>
+                  <p>
+                    <span>
+                      <img src={TU3} alt="UI"></img>CSS properties
+                    </span>
+                    <img src={MarkUp} alt="MarkUp"></img>
+                  </p>
+                  <p>
+                    <span>
+                      <img src={TU4} alt="UI"></img>CSS box models
+                    </span>
+                    <img src={MarkUp} alt="MarkUp"></img>
+                  </p>
+                  <p>
+                    <span>
+                      <img src={TU5} alt="UI"></img>Styling
+                    </span>
+                    <img src={MarkUp} alt="MarkUp"></img>
+                  </p>
+                  <p>
+                    <span>
+                      <img src={TU6} alt="UI"></img>CSS color
+                    </span>
+                    <img src={MarkUp} alt="MarkUp"></img>
+                  </p>
+                  <p>
+                    <span>
+                      <img src={TU7} alt="UI"></img>CSS color
+                    </span>
+                    <img src={MarkUp} alt="MarkUp"></img>
+                  </p>
+                  <p>
+                    <span>
+                      <img src={TU8} alt="UI"></img>CSS transitions
+                    </span>
+                    <img src={MarkUp} alt="MarkUp"></img>
+                  </p>
                 </div>
               </div>
             </div>
