@@ -2,7 +2,7 @@ import "./courseDetail_Content.css";
 import SideBar from "../sideBar";
 import TopBar from "../topBar";
 import Button from "../Navigation/button";
-import UI from "../Image/image2/UI.png";
+import U1 from "../Image/image2/U1.png";
 import MarkUp from "../Image/image2/MarkUp.png";
 
 function CourseDetail_Content() {
@@ -14,7 +14,7 @@ function CourseDetail_Content() {
 
       <div className="rightBody">
         <div className="rightBodyTop">
-          <TopBar />
+          <TopBar avatar={U1}/>
         </div>
 
         <section className="rightSection">
@@ -33,9 +33,19 @@ function CourseDetail_Content() {
                 <div className="bottomBorder">
                   <h2>MODULE 1 - INTRODUCTION</h2>
                   <p>
-                    <img src={UI} alt="UI"></img>Definition of HTML <img src={MarkUp} alt="MarkUp"></img>
+                    <span>
+                      <img src={U1} alt="UI"></img>Definition of HTML
+                    </span>
+                    <img src={MarkUp} alt="MarkUp"></img>
                   </p>
-                  <p>HTML tags and elements</p>
+
+                  <p>
+                    <span>
+                      <img src={U1} alt="UI"></img>HTML tags and elements
+                    </span>
+                    <img src={MarkUp} alt="MarkUp"></img>
+                  </p>
+
                   <p>Text formatting and ...</p>
                   <p>20 Students</p>
                   <p>20 Students</p>
@@ -43,8 +53,14 @@ function CourseDetail_Content() {
 
                 <div className="bottomBorder">
                   <h2>COURSE 2 - Learn Manufacturing</h2>
-                  <p>100% positive reviews</p>
-                  <p>20 Students</p>
+                  <p> Introduction to CSS</p>
+                  <p>CSS selector</p>
+                  <p>CSS properties</p>
+                  <p>CSS box models</p>
+                  <p>Styling</p>
+                  <p>CSS color</p>
+                  <p>CSS Units</p>
+                  <p>CSS transitions</p>
                 </div>
               </div>
             </div>
@@ -76,7 +92,8 @@ function CourseDetail() {
       <h3>Computer Programming</h3>
       <p>By Oluwasijibomi Fayilenu, Computer Programming Expert</p>
       <div className="courseInfo">
-        <span className="roundedTextBox">Information</span>
+        <span>Information</span>
+        <span className="roundedTextBox">Content</span>
         <span>Content</span>
         <span>Community</span>
         <span>Students</span>
@@ -91,15 +108,15 @@ function CourseDetail() {
           </div>
           <p>1 completed units of 6 available</p>
         </div>
-        <Button url="#" buttonText="Go to Unit 3" />
+        <Button url="assessment" buttonText="Go to Unit 2" />
       </div>
       <article>
-        <h2>Course 1 - Introduction</h2>
-      
-        <p>Module 2: HTML semantic elements</p>
-        <p>You have completed Course 1: Take Assessment</p>
-        <h2>Course 2 - CSS Basics</h2>
-        <h2>Course 3 - CSS Layouts and Styling</h2>
+        <h3>Module 1 - Introduction</h3>
+        <p>Lesson 1: HTML fundamentals </p>
+        <p>Lesson 2: HTML semantic elements</p>
+        <p>You have completed course 1: Take Assessment</p>
+        <h3>Module 2- CSS BASICS</h3>
+        <h3>Course 3-CSS Layouts and Styling</h3>
       </article>
     </div>
   );
