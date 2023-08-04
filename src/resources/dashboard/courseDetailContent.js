@@ -1,4 +1,4 @@
-import "./courseDetail_Content.css";
+import "./courseDetailContent.css";
 import SideBar from "../sideBar";
 import TopBar from "../topBar";
 import Button from "../Navigation/button";
@@ -14,7 +14,7 @@ import TU8 from "../Image/image2/TU8.png";
 import Avatar from "../Image/image2/Avatar.png";
 
 
-function CourseDetail_Content() {
+function CourseDetailContent() {
   return (
     <div className="studentDashboardBody">
       <div className="leftBodyOO">
@@ -152,7 +152,7 @@ function CourseDetail_Content() {
   );
 }
 
-export default CourseDetail_Content;
+export default CourseDetailContent;
 
 // An Internal Component
 
