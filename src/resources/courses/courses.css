@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    
+
 }
 
 .coursesActive {
@@ -39,6 +39,11 @@
     justify-content: space-between;
 }
 
+.exploreCourses h2 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
 .indCourse {
     display: flex;
     width: 303px;
@@ -59,7 +64,7 @@
     flex-wrap: wrap;
     gap: 30px;
     height: fit-content;
-   
+
 }
 
 .courseDiv::after {
@@ -80,6 +85,14 @@
     /* display: flex; */
     /* justify-content: flex-start; */
     align-content: start;
-    height: 10px;
-    width: 30px;
+    height: 80px;
+    /* width: 30px; */
+}
+
+.coursesImage img {
+    height: 100%;
+    /* width: 300%px; */
+}
+.courseName {
+    text-align: left;
 }
