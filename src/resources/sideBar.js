@@ -24,8 +24,8 @@ function SideBar(props) {
           </a>
         </p>
         <p>
-          <img className="HEADSET" src={Headset} alt="Headset" />
-          Headset
+          <img className="SUPPORT" src={Headset} alt="Help & Support" />
+          Help & Support
         </p>
         <p>
           <img className="SETTING" src={Settings} alt="Settings" />
