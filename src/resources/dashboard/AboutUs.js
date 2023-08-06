@@ -44,9 +44,11 @@ function AboutUsPage() {
         <div className="MissionA">
           <h1 className="MissionTag">Our Mission </h1>
           <p>
-            By leveraging technology and innovative approaches to offer
-            personalized and transformative experiences that promote growth,
-            self-discovery, and a successful reintegration into the society
+            By leveraging technology and innovative<br></br> approaches to offer
+            personalized and <br></br>transformative experiences that promote
+            <br></br>
+            growth, self-discovery, and a successful <br></br>reintegration into
+            the society
           </p>
         </div>
         <div

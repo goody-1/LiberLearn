@@ -18,6 +18,8 @@ section {
 .sideBarA p a {
   text-decoration: none;
   color: white;
+  display: flex;
+  align-items: center;
 }
 
 .sideBarB p a {

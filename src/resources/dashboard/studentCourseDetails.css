@@ -6,6 +6,8 @@
   align-items: center;
   justify-content: space-between;
   overflow-y: scroll;
+  font-family:Poppins;
+color: rgba(118, 114, 120, 1);
 }
 
 .rightBodyLow {
@@ -136,6 +138,13 @@ span {
 
 article {
     margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.StudentArticleCDP{
+    font-family:Poppins;
+    color: rgba(118, 114, 120, 1);
 }
 
 .rightContainer {
@@ -240,3 +249,13 @@ justify-content: space-between;
     background-color: rgb(255, 227, 196);
     display: inline;
 }
+
+.ElectSP{
+  color: rgba(16, 40, 68, 1);
+  /* font-weight: 600; */
+
+}
+/* .ElectSP1{
+    font-weight: 400;
+ align-items: flex-start;
+} */

@@ -19,7 +19,7 @@ function StudentCourseDetails() {
             <div className="rightBodyLow-Left">
               <div className="leftContainer">
                 <h2>Discover</h2>
-                <p>Courses ** Computer Programming</p>
+                <p>Courses &gt; <span className="ElectSP">Computer Programming</span></p>
                 <CourseDetail />
               </div>
             </div>
@@ -32,18 +32,18 @@ function StudentCourseDetails() {
                   </a>
                 </div>
                 <div className="bottomBorder">
-                  <h2>What you'll learn</h2>
+                  <h2 className="ElectSP1">What you'll learn</h2>
                   <p>
                     You will learnt he basic of Computer Programming using HTML
                     and CSS
                   </p>
                 </div>
                 <div className="bottomBorder">
-                  <h2>This includes:</h2>
+                  <h2 className="ElectSP1">This course includes:</h2>
                   <p>100% positive reviews</p>
                   <p>20 Students</p>
-                  <p>15 Lessons (***)</p>
-                  <p>8 Courses</p>
+                  <p>15 Lessons (10h 5m)</p>
+                  <p>6 Courses</p>
                   <p>20 downloads (20 files)</p>
                   <p>Available from the app</p>
                   <p>Audio: English</p>
@@ -53,7 +53,7 @@ function StudentCourseDetails() {
                 </div>
 
                 <div className="tags">
-                  <h2>Tags:</h2>
+                  <h2 className="ElectSP1">Tags:</h2>
                   <p>
                     <span>HTML X</span> <span>CSS X</span>
                   </p>
@@ -88,14 +88,16 @@ function CourseDetail() {
         ></iframe>
       </div>
       <h3>Computer Programming</h3>
-      <p>By Oluwasijibomi Fayilenu, Computer Programming Expert</p>
+      <p>
+        By Oluwasijibomi Fayilenu, <span className="ElectSP">Computer Programming Expert</span>
+      </p>
       <div className="courseInfo">
         <span className="roundedTextBox">Information</span>
         <span>Content</span>
         <span>Community</span>
         <span>Students</span>
       </div>
-      <article>
+      <article className="StudentArticleCDP">
         <p>
           Welcome to the exciting world of computer programming! Computer
           programming is like giving instructions to a computer to perform
@@ -105,8 +107,6 @@ function CourseDetail() {
           communicate with the computer.{" "}
         </p>
 
-        
-        
         <p>
           In programming, you'll learn about algorithms, which are step-by-step
           instructions that help solve problems. You'll use programming

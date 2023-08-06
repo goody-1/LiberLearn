@@ -10,23 +10,25 @@
     border-radius: 10px;
 }
 
-.directToUnit div {
-    width: 90%;
+.dirToUnit-Container {
+    width: 100%;
     box-sizing: border-box;
 }
 
 .hr-lightOrange {
-    width: 80%;
+    width: 90%;
     background-color: rgb(249, 218, 160);
     height: 5px;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
 .hr-orange {
-    width: 20%;
+    width: 40%;
     background-color: orange;
     height: 100%;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
 .rightSection {
@@ -168,6 +170,28 @@ article {
     margin-top: 10px;
 }
 
+.courseDetailArticle {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+article h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+article p {
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 15px;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .rightContainer {
     width: 100%;
     height: fit-content;
@@ -288,4 +312,10 @@ justify-content: space-between;
     color: rgb(250, 138, 34);
     background-color: rgb(255, 227, 196);
     display: inline;
+}
+.TakeAssessment a{
+    text-decoration: none;
+    font-weight: 600;
+    color: rgba(16, 40, 68, 1);
+;
 }
