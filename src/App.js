@@ -9,10 +9,10 @@ import {Routes, Route} from 'react-router-dom';
 import StudentDashboard from './resources/dashboard/studentDashboard';
 import StudentCourseDetails from "./resources/dashboard/studentCourseDetails";
 import AboutUsPage from "./resources/dashboard/AboutUs";
-import AssessmentPassed from './resources/dashboard/assessmentPassed';
+// import AssessmentPassed from './resources/dashboard/assessmentPassed';
 import AssessmentPage from './resources/dashboard/assessmentPage';
-import AssessmentFail from './resources/dashboard/assessmentFail';
-import CourseDetails_Content from './resources/dashboard/courseDetail_Content';
+// import AssessmentFail from './resources/dashboard/assessmentFail';
+import CourseDetailsContent from './resources/dashboard/courseDetailContent';
 
 
 
@@ -31,7 +31,7 @@ function App() {
         <Route path="/about-us" element={<AboutUsPage />}></Route>
         <Route
           path="/course-detail-content"
-          element={<CourseDetails_Content />}
+          element={<CourseDetailsContent />}
         ></Route>
         <Route path="/assessment" element={<AssessmentPage />}></Route>
 
@@ -43,7 +43,7 @@ function App() {
       </Routes>
     </div>
   );
-  
+
 }
 
 

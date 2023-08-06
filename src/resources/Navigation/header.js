@@ -24,7 +24,7 @@ function Header (props) {
               <a href="/courses">Courses</a>
             </li>
             <li className={props.contactActive}>
-              <a href="#contact-us">Contact</a>
+              <a href="/#contact-us">Contact</a>
             </li>
           </ul>
         </nav>
