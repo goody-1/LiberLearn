@@ -13,16 +13,18 @@ import TU7 from "../Image/image2/TU7.png";
 import TU8 from "../Image/image2/TU8.png";
 import Avatar from "../Image/image2/Avatar.png";
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import { useParams } from "react-router-dom";
 
-function CourseDetailContent({ courseId }) {
+function CourseDetailContent() {
+  const { courseId } = useParams();
   const [course, setCourse] = useState(null);
 
   useEffect(() => {
-    // Fetch data for the specific course using the courseId
-    axios.get(`https://liberlearn-backend.up.railway.app/api/subjects/${courseId}`)
-      .then(response => {
-        setCourse(response.data);
+    fetch(`https://liberlearn-backend.up.railway.app/api/subjects/${courseId}`)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        setCourse(data);
       })
       .catch(error => {
         console.error('Error fetching course details:', error);
@@ -50,7 +52,14 @@ function CourseDetailContent({ courseId }) {
               <div className="leftContainer">
                 <h2>Discover</h2>
                 <p>Courses &gt; Computer Programming</p>
-                <CourseDetail />
+                <CourseDetail
+                  key = {course.title}
+                  title = {course.title}
+                  info = {course.info}
+                  number_of_courses = {course.number_of_courses}
+                  courses = {course.courses}
+
+                />
               </div>
             </div>
             <div className="rightBodyLow-Right">
@@ -183,12 +192,12 @@ function CourseDetail(props) {
           height="380"
           src="https://www.youtube.com/embed/zOjov-2OZ0E"
           title="I                                                                                                                                                                                                                                                                                            ntroduction to Programming and Computer Science - Full Course"
-          frameborder="0"
+          // frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
       </div>
-      <h3>Computer Programming</h3>
+      <h3>{props.title}</h3>
       <p>By Oluwasijibomi Fayilenu, Computer Programming Expert</p>
       <div className="courseInfo">
         <span>Information</span>
@@ -200,12 +209,19 @@ function CourseDetail(props) {
 
       <div className="directToUnit">
         <div className="dirToUnit-Container">
-          <p>Course 1 of 6</p>
-          <p>Course 1 - Introduction</p>
+          <p>Module 1 of {props.number_of_courses}</p>
+          <p>Module 1 - Introduction</p>
           <div className="hr-lightOrange">
             <div className="hr-orange"></div>
           </div>
-          <p>1 completed units of 6 available</p>
+          <p>1 completed unit of {
+            props.courses && props.courses.map(course => {
+              if (course.id === 1) {
+                return `${course.lessons.length}`;
+              }
+              return '';
+            })
+          } available</p>
         </div>
         <Button buttonText="Go to Unit 2" />
       </div>
