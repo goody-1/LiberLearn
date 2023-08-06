@@ -1,6 +1,8 @@
 .directToUnit {
     width: 90%;
-    background-color: rgb(230, 226, 226);
+    /* background-color: rgb(230, 226, 226);  */
+    background: rgba(248, 248, 251, 1);
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -13,6 +15,9 @@
 .dirToUnit-Container {
     width: 100%;
     box-sizing: border-box;
+}
+.dirToUnit-Container, a, getStarted {
+    font-size:13px;
 }
 
 .hr-lightOrange {
@@ -170,6 +175,7 @@ article {
     flex-direction: column;
     gap: 10px;
 }
+
 
 article h3 {
     display: flex;

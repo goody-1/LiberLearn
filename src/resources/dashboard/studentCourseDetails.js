@@ -1,6 +1,14 @@
 import "./studentCourseDetails.css";
 import SideBar from "../sideBar";
 import TopBar from "../topBar";
+import TCI1 from "../Image/image2/TCI1.png";
+import TCI2 from "../Image/image2/TCI2.png";
+import TCI3 from "../Image/image2/TCI3.png";
+import TCI4 from "../Image/image2/TCI4.png";
+import TCI5 from "../Image/image2/TCI5.png";
+import TCI6 from "../Image/image2/TCI6.png";
+import TCI7 from "../Image/image2/TCI7.png";
+import TCI8 from "../Image/image2/TCI8.png";
 
 function StudentCourseDetails() {
   return (
@@ -19,7 +27,10 @@ function StudentCourseDetails() {
             <div className="rightBodyLow-Left">
               <div className="leftContainer">
                 <h2>Discover</h2>
-                <p>Courses &gt; <span className="ElectSP">Computer Programming</span></p>
+                <p>
+                  Courses &gt;{" "}
+                  <span className="ElectSP">Computer Programming</span>
+                </p>
                 <CourseDetail />
               </div>
             </div>
@@ -40,15 +51,46 @@ function StudentCourseDetails() {
                 </div>
                 <div className="bottomBorder">
                   <h2 className="ElectSP1">This course includes:</h2>
-                  <p>100% positive reviews</p>
-                  <p>20 Students</p>
-                  <p>15 Lessons (10h 5m)</p>
-                  <p>6 Courses</p>
-                  <p>20 downloads (20 files)</p>
-                  <p>Available from the app</p>
-                  <p>Audio: English</p>
                   <p>
-                    Level <span className="level">Beginner</span>
+                    <span>
+                      <img src={TCI1} alt="TCI1"></img> 100% positive reviews
+                    </span>
+                  </p>
+                  <p>
+                    <span>
+                      <img src={TCI2} alt="TCI2"></img> 20 Students
+                    </span>
+                  </p>
+                  <p>
+                    <span>
+                      <img src={TCI3} alt="TCI3"></img>15 Lessons (10h 5m)
+                    </span>
+                  </p>
+                  <p>
+                    <span>
+                      <img src={TCI4} alt="TCI4"></img>6 Courses
+                    </span>
+                  </p>
+                  <p>
+                    <span>
+                      <img src={TCI5} alt="TCI5"></img>20 downloads (20 files)
+                    </span>
+                  </p>
+                  <p>
+                    <span>
+                      <img src={TCI6} alt="TCI6"></img>Available from the app
+                    </span>
+                  </p>
+                  <p>
+                    <span>
+                      <img src={TCI7} alt="TCI7"></img>Audio: English
+                    </span>
+                  </p>
+                  <p>
+                    <span>
+                      <img src={TCI8} alt="TCI8"></img>Level
+                      <span className="level">Beginner</span>
+                    </span>
                   </p>
                 </div>
 

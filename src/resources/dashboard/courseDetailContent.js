@@ -2,17 +2,20 @@ import "./courseDetailContent.css";
 import SideBar from "../sideBar";
 import TopBar from "../topBar";
 import Button from "../Navigation/button";
-import U1 from "../Image/image2/U1.png";
+import L1 from "../Image/image2/L1.png";
 import MarkUp from "../Image/image2/MarkUp.png";
-import TU2 from "../Image/image2/TU2.png";
-import TU3 from "../Image/image2/TU3.png";
-import TU4 from "../Image/image2/TU4.png";
-import TU5 from "../Image/image2/TU5.png";
-import TU6 from "../Image/image2/TU6.png";
-import TU7 from "../Image/image2/TU7.png";
-import TU8 from "../Image/image2/TU8.png";
+import L2 from "../Image/image2/L2.png";
+import L3 from "../Image/image2/L3.png";
+import L4 from "../Image/image2/L4.png";
+import L5 from "../Image/image2/L5.png";
+import L6 from "../Image/image2/L6.png";
+import L7 from "../Image/image2/L7.png";
+import L8 from "../Image/image2/L8.png";
+import L88 from "../Image/image2/L88.png";
+import ItmUP from "../Image/image2/ItmUP.png";
+import ItmDown from "../Image/image2/ItmDown.png";
+import PlayHub from "../Image/image2/PlayHub.png";
 import Avatar from "../Image/image2/Avatar.png";
-
 
 function CourseDetailContent() {
   return (
@@ -43,50 +46,50 @@ function CourseDetailContent() {
                   <h2>MODULE 1 - INTRODUCTION</h2>
                   <p>
                     <span>
-                      <img src={U1} alt="UI"></img>Definition of HTML
+                      <img src={L1} alt="L1"></img>Definition of HTML
                     </span>
                     <img src={MarkUp} alt="MarkUp"></img>
                   </p>
 
                   <p>
                     <span>
-                      <img src={TU2} alt="UI"></img>HTML tags and elements
+                      <img src={L2} alt="L2"></img>HTML tags and elements
                     </span>
                     <img src={MarkUp} alt="MarkUp"></img>
                   </p>
                   <p>
                     <span>
-                      <img src={TU3} alt="UI"></img>Text formatting and ...
+                      <img src={L3} alt="L3"></img>Text formatting and ...
                     </span>
                     <img src={MarkUp} alt="MarkUp"></img>
                   </p>
                   <p>
                     <span>
-                      <img src={TU4} alt="UI"></img>Links and anchor
+                      <img src={L4} alt="L4"></img>Links and anchor
                     </span>
                     <img src={MarkUp} alt="MarkUp"></img>
                   </p>
                   <p>
                     <span>
-                      <img src={TU5} alt="UI"></img>Images and multimedia
+                      <img src={L5} alt="L5"></img>Images and multimedia
                     </span>
                     <img src={MarkUp} alt="MarkUp"></img>
                   </p>
                   <p>
                     <span>
-                      <img src={TU6} alt="UI"></img>HTML forms
+                      <img src={L6} alt="L6"></img>HTML forms
                     </span>
                     <img src={MarkUp} alt="MarkUp"></img>
                   </p>
                   <p>
                     <span>
-                      <img src={TU7} alt="UI"></img>Semantics HTML
+                      <img src={L7} alt="L7"></img>Semantics HTML
                     </span>
                     <img src={MarkUp} alt="MarkUp"></img>
                   </p>
                   <p>
                     <span>
-                      <img src={TU8} alt="UI"></img>Tables
+                      <img src={L8} alt="L8"></img>Tables
                     </span>
                     <img src={MarkUp} alt="MarkUp"></img>
                   </p>
@@ -96,49 +99,49 @@ function CourseDetailContent() {
                   <h2>COURSE 2 - Learn Manufacturing</h2>
                   <p>
                     <span>
-                      <img src={U1} alt="UI"></img>Introduction to CSS
+                      <img src={L1} alt="L1"></img>Introduction to CSS
                     </span>
                     <img src={MarkUp} alt="MarkUp"></img>
                   </p>
                   <p>
                     <span>
-                      <img src={TU2} alt="UI"></img>CSS selector
+                      <img src={L2} alt="L2"></img>CSS selector
                     </span>
                     <img src={MarkUp} alt="MarkUp"></img>
                   </p>
                   <p>
                     <span>
-                      <img src={TU3} alt="UI"></img>CSS properties
+                      <img src={L3} alt="L3"></img>CSS properties
                     </span>
                     <img src={MarkUp} alt="MarkUp"></img>
                   </p>
                   <p>
                     <span>
-                      <img src={TU4} alt="UI"></img>CSS box models
+                      <img src={L4} alt="L4"></img>CSS box models
                     </span>
                     <img src={MarkUp} alt="MarkUp"></img>
                   </p>
                   <p>
                     <span>
-                      <img src={TU5} alt="UI"></img>Styling
+                      <img src={L5} alt="L5"></img>Styling
                     </span>
                     <img src={MarkUp} alt="MarkUp"></img>
                   </p>
                   <p>
                     <span>
-                      <img src={TU6} alt="UI"></img>CSS color
+                      <img src={L6} alt="L6"></img>CSS color
                     </span>
                     <img src={MarkUp} alt="MarkUp"></img>
                   </p>
                   <p>
                     <span>
-                      <img src={TU7} alt="UI"></img>CSS color
+                      <img src={L7} alt="L7"></img>CSS color
                     </span>
                     <img src={MarkUp} alt="MarkUp"></img>
                   </p>
                   <p>
                     <span>
-                      <img src={TU8} alt="UI"></img>CSS transitions
+                      <img src={L88} alt="L88"></img>CSS transitions
                     </span>
                     <img src={MarkUp} alt="MarkUp"></img>
                   </p>
@@ -193,20 +196,41 @@ function CourseDetail() {
       </div>
       <article className="courseDetailArticle">
         <h3>
-          Module 1 - Introduction<span>img</span>
+          Module 1 - Introduction
+          <span>
+            <img src={ItmUP} alt="ItmUp"></img>
+          </span>
         </h3>
-        <p style={{ backgroundImage: `url(${U1})` }}>
-          Lesson 1: HTML fundamentals <span>im</span>
+        <p style={{ backgroundImage: `url(${PlayHub})` }}>
+          Lesson 1: HTML fundamentals{" "}
+          <span>
+            <img src={MarkUp} alt="MarkUp"></img>
+          </span>
         </p>
-        <p>Lesson 2: HTML semantic elements</p>
+        <p style={{ backgroundImage: `url(${PlayHub})` }} >
+          Lesson 2: HTML semantic elements
+          <span>
+            <img src={MarkUp} alt="MarkUp"></img>
+          </span>
+        </p>
         <p>
           <span className="TakeAssessment">
-            You have completed course 1:{" "}
+            You have completed course 1:
             <a href="assessment">Take Assessment</a>
           </span>
         </p>
-        <h3>Module 2- CSS BASICS</h3>
-        <h3>Course 3-CSS Layouts and Styling</h3>
+        <h3>
+          Module 2- CSS BASICS
+          <span>
+            <img src={ItmDown} alt="ItmDown"></img>
+          </span>
+        </h3>
+        <h3>
+          Course 3-CSS Layouts and Styling
+          <span>
+            <img src={ItmDown} alt="ItmDown"></img>
+          </span>
+        </h3>
       </article>
     </div>
   );

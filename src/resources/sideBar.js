@@ -24,15 +24,15 @@ function SideBar(props) {
           </a>
         </p>
         <p>
-<<<<<<< HEAD
+{/* <<<<<<< HEAD
           <img className="HEADSET" src={Headset} alt="Headset" />
           Help & Support
           </p>
-=======
+======= */}
           <img className="SUPPORT" src={Headset} alt="Help & Support" />
           Help & Support
         </p>
->>>>>>> 9ed4e172f68ecf7f0d2356be858631e713ffb11a
+{/* >>>>>>> 9ed4e172f68ecf7f0d2356be858631e713ffb11a */}
         <p>
           <img className="SETTING" src={Settings} alt="Settings" />
           Settings
