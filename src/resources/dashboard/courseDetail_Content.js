@@ -31,7 +31,7 @@ function CourseDetail_Content() {
             <div className="rightBodyLow-Left">
               <div className="leftContainer">
                 <h2>Discover</h2>
-                <p>Courses ** Computer Programming</p>
+                <p>Courses &gt; Computer Programming</p>
                 <CourseDetail />
               </div>
             </div>
@@ -181,7 +181,7 @@ function CourseDetail() {
       </div>
 
       <div className="directToUnit">
-        <div>
+        <div className="dirToUnit-Container">
           <p>Course 1 of 6</p>
           <p>Course 1 - Introduction</p>
           <div className="hr-lightOrange">
@@ -189,13 +189,22 @@ function CourseDetail() {
           </div>
           <p>1 completed units of 6 available</p>
         </div>
-        <Button url="assessment" buttonText="Go to Unit 2" />
+        <Button buttonText="Go to Unit 2" />
       </div>
-      <article>
-        <h3>Module 1 - Introduction</h3>
-        <p>Lesson 1: HTML fundamentals </p>
+      <article className="courseDetailArticle">
+        <h3>
+          Module 1 - Introduction<span>img</span>
+        </h3>
+        <p style={{ backgroundImage: `url(${U1})` }}>
+          Lesson 1: HTML fundamentals <span>im</span>
+        </p>
         <p>Lesson 2: HTML semantic elements</p>
-        <p>You have completed course 1: Take Assessment</p>
+        <p>
+          <span className="TakeAssessment">
+            You have completed course 1:{" "}
+            <a href="assessment">Take Assessment</a>
+          </span>
+        </p>
         <h3>Module 2- CSS BASICS</h3>
         <h3>Course 3-CSS Layouts and Styling</h3>
       </article>

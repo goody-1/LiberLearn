@@ -18,6 +18,7 @@ import MeMail from "../Image/image2/MeMail.png";
 import YellowBulb from "../Image/image2/YellowBulb.png";
 import Cool from "../Image/image2/Cool.png";
 import LightBulb from "../Image/image2/LightBulb.png";
+import QuizQ from "../Image/image2/QuizQ.png";
 
 function StudentDashboard() {
   return (
@@ -49,16 +50,16 @@ function StudentDashboard() {
             <CourseDetails
               image={Bube}
               numbers="5"
-              information="Certificate earned"
+              information="Course in progress"
               color="orange"
-              percent="10%"
+              percent="70%"
             />
-            <CourseDetails
+            <CourseDifferent
               image={Flag}
               numbers="3"
-              information="Certificate earned"
+              information="Career path"
               color="orange"
-              percent="10%"
+              percent="Start quiz" img=""
             />
           </div>
 
@@ -84,6 +85,7 @@ function StudentDashboard() {
                 courseTitle="Computer Programming"
                 courseDetailedInfo="Introduction to programming language."
                 action="Continue"
+                url="/courses/details"
               />
               <ComponentCourseA
                 courseImage={Wood}
@@ -104,9 +106,9 @@ function StudentDashboard() {
                 action="Continue"
               />
             </div>
-            <div className="rightBodyLow-Right">
+            <div className="rightBodyLow-Right-SDB">
               <p>Upcoming tasks</p>
-              <div className="courseB-Body">
+              <div className="courseB-Act">
                 <ComponentCourseB
                   image={Slide}
                   numbers="Craft Making"
@@ -185,7 +187,7 @@ function ComponentCourseA(props) {
       <div className="unitDetails">
         <p>
           <img src={ToIcon} />
-          15 Lessons <a href="/courses/details">{props.action}</a>
+          15 Lessons <a href={props.url}>{props.action}</a>
         </p>
       </div>
     </div>
@@ -205,6 +207,29 @@ function ComponentCourseB(props) {
             {props.numbers} <span className="ps">{props.information}</span>
           </p>
         </div>
+      </div>
+    </div>
+  );
+}
+
+
+function CourseDifferent(props) {
+  return (
+    <div className="courseDetail">
+      <div className="detTop">
+        <div
+          className="imageTag"
+          style={{ backgroundImage: `url(${props.image})` }}
+        ></div>
+        <p>
+          {props.numbers} <span>{props.information}</span>
+        </p>
+      </div>
+      <div className="detBottom">
+        {/* <div className="horizontalBar">
+          <div style={{ backgroundColor: `${props.color}` }}></div>
+        </div> */}
+        <p>{props.percent}</p>
       </div>
     </div>
   );
