@@ -80,8 +80,6 @@ function CourseDetail() {
     <div className="border">
       <div className="imageArea">
         <iframe
-          width="770"
-          height="491"
           src="https://www.youtube.com/embed/zOjov-2OZ0E"
           title="Introduction to Programming and Computer Science - Full Course"
           frameborder="0"

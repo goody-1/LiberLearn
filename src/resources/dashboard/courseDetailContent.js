@@ -12,9 +12,27 @@ import TU6 from "../Image/image2/TU6.png";
 import TU7 from "../Image/image2/TU7.png";
 import TU8 from "../Image/image2/TU8.png";
 import Avatar from "../Image/image2/Avatar.png";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
+function CourseDetailContent({ courseId }) {
+  const [course, setCourse] = useState(null);
 
-function CourseDetailContent() {
+  useEffect(() => {
+    // Fetch data for the specific course using the courseId
+    axios.get(`https://liberlearn-backend.up.railway.app/api/subjects/${courseId}`)
+      .then(response => {
+        setCourse(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching course details:', error);
+      });
+  }, [courseId]);
+
+  if (!course) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className="studentDashboardBody">
       <div className="leftBodyOO">
@@ -156,15 +174,15 @@ export default CourseDetailContent;
 
 // An Internal Component
 
-function CourseDetail() {
+function CourseDetail(props) {
   return (
     <div className="border">
       <div className="imageArea">
         <iframe
-          width="770"
-          height="491"
+          width="620"
+          height="380"
           src="https://www.youtube.com/embed/zOjov-2OZ0E"
-          title="Introduction to Programming and Computer Science - Full Course"
+          title="I                                                                                                                                                                                                                                                                                            ntroduction to Programming and Computer Science - Full Course"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen

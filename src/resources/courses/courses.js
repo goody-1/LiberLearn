@@ -77,7 +77,11 @@ function CoursesDiv(props) {
         <h1>{props.courseName}</h1>
       </div>
       <div className="courseInfo">
-        <p>{props.courseInfo}</p>
+        <p>
+          {props.courseInfo.length > 120 ?
+          `${props.courseInfo.substring(0, 100)} ...` :
+          props.courseInfo}
+        </p>
       </div>
       <div className="lessonNum">
         <p>{props.lessonNum} Lessons</p>
