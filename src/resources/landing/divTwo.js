@@ -2,7 +2,7 @@ import './divTwo.css';
 import image1 from '../Image/Little boy listening to his teacher through headphones.png';
 import image2 from "../Image/Small black boy elearning on a computer at home.png";
 import image3 from "../Image/readingGuys.png";
-import arrowImage from "../Image/blue_arrow-up-right.png";
+// import arrowImage from "../Image/blue_arrow-up-right.png";
 
 
 function DivTwo () {
