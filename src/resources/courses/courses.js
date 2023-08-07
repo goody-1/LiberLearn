@@ -101,7 +101,7 @@ function getRandomColor() {
     "#77DD77", "#CCFB5D", "#64E986", "#4863A0", "#6AFB92", "#C4FECA", "#A7EFFF",
     "#bf5f4c", "#F7E7CE", "#FBE7A1", "#FFE87C", "#B5A642", "#c6e2ff", "#fa8072", "#1E90FF",
     "#357EC7", "#3BB9FF", "#AB784E", "#EE9A4D", "#B0E0E6", "#FBB2F3",
-    "#98AFC7", "#3090C7", "#483D8B", "#CCCCFF", "#FAF0E6", "#A7AAFF",
+    "#98AFC7", "#3090C7", "#7468bd", "#CCCCFF", "#FAF0E6", "#A7AAFF",
     "#D2691E", "#52595D", "#4682B4", "#E6E6FA", "#DDA0DD", "#438D80", "#F0E68C",
     "#ffd700", "#b0e0e6", "#c0d6e4", "#00ced1", "#ff7f50", "#5fa0b6", "#afeeee", "#81d8d0",
     "#4cbbf5", "#66cccc", "#6897bb", "#b4eeb4", "#16E2F5", "#ffdab9", "#dddddd",
