@@ -3,6 +3,7 @@ import background from "../Image/courses.png";
 import Header from "../Navigation/header";
 import Footer from "../Navigation/footer";
 import React, { useEffect, useState } from 'react';
+import { Link } from "react-router-dom";
 
 
 function CoursesPage() {
@@ -16,6 +17,7 @@ function CoursesPage() {
         console.log('API Response:', data);
         const mappedCourses = data.map(
           apiCourse => ({
+            courseId: apiCourse.id,
             courseImage: apiCourse.image_link,
             courseName: apiCourse.title,
             courseInfo: apiCourse.info,
@@ -47,14 +49,17 @@ function CoursesPage() {
         <div className="courseDiv">
           {courses.map(
             course => (
-              <CoursesDiv
-                key={course.courseName} // Assuming courseName is unique
-                courseImage={course.courseImage}
-                courseName={course.courseName}
-                courseInfo={course.courseInfo}
-                lessonNum={course.lessonNum}
-                color={getRandomColor()}
-              />
+              <Link to={`/courses/${course.courseId}`} key={course.courseId}
+                className="course-card-link">
+                <CoursesDiv
+                  key={course.courseName} // Assuming courseName is unique
+                  courseImage={course.courseImage}
+                  courseName={course.courseName}
+                  courseInfo={course.courseInfo}
+                  lessonNum={course.lessonNum}
+                  color={getRandomColor()}
+                />
+              </Link>
             )
           )}
         </div>
@@ -95,8 +100,8 @@ function getRandomColor() {
     "#72bcd4", "#33FFA8", "#7DFDFE", "#AAF0D1", "#20B2AA", "#3B9C9C", "#00A36C",
     "#77DD77", "#CCFB5D", "#64E986", "#4863A0", "#6AFB92", "#C4FECA", "#A7EFFF",
     "#954535", "#F7E7CE", "#FBE7A1", "#FFE87C", "#B5A642", "#c6e2ff", "#fa8072", "#1E90FF",
-    "#357EC7", "#3BB9FF", "#AB784E", "#EE9A4D", "#665D1E", "#B0E0E6", "#FBB2F3",
-    "#98AFC7", "#3090C7", "#483D8B", "#8467D7", "#CCCCFF", "#FAF0E6", "#A7AAFF",
+    "#357EC7", "#3BB9FF", "#AB784E", "#EE9A4D", "#B0E0E6", "#FBB2F3",
+    "#98AFC7", "#3090C7", "#483D8B", "#CCCCFF", "#FAF0E6", "#A7AAFF",
     "#D2691E", "#52595D", "#4682B4", "#E6E6FA", "#DDA0DD", "#438D80", "#F0E68C", "#1B8A6B",
     "#ffd700", "#b0e0e6", "#c0d6e4", "#00ced1", "#ff7f50", "#468499", "#afeeee", "#81d8d0",
     "#0a75ad", "#0a75ad", "#66cccc", "#6897bb", "#b4eeb4", "#16E2F5", "#ffdab9", "#dddddd",
