@@ -192,7 +192,7 @@ function CourseDetail(props) {
               {
                 props.courses && props.courses.map((course, index) => (
                   <div className="bottomBorder">
-                    <h2>MODULE {index + 1} - {props.title.toUpperCase()}</h2>
+                    <h2>MODULE {index + 1} - {course.title.toUpperCase()}</h2>
                     {
                       course.lessons && course.lessons.map((lesson, index) => (
                         <p>
