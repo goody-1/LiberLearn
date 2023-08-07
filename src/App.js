@@ -25,13 +25,13 @@ function App() {
         <Route path="/student-dashboard" element={<StudentDashboard />}></Route>
         <Route path="/courses" element={<CoursesBody />}></Route>
         <Route
-          path="/courses/details"
-          element={<StudentCourseDetails />}
+          path="/courses/:courseId/detail"
+          element={<CourseDetailsContent />}
         ></Route>
         <Route path="/about-us" element={<AboutUsPage />}></Route>
         <Route
           path="/courses/:courseId"
-          element={<CourseDetailsContent />}
+          element={<StudentCourseDetails />}
         ></Route>
         <Route path="/assessment" element={<AssessmentPage />}></Route>
 

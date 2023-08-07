@@ -243,11 +243,12 @@ justify-content: space-between;
 
 .level {
     width: 60%;
-    padding: 2px 10px;
+    padding: 2px 6px;
     border-radius: 5px;
     color: rgb(250, 138, 34);
     background-color: rgb(255, 227, 196);
     display: inline;
+    margin-left: 10px;
 }
 
 .ElectSP{
