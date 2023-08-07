@@ -219,22 +219,6 @@ article p {
     align-items: center;
 }
 
-.bottomBorder {
-    border-bottom: 1.5px solid grey;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    gap: 20px;
-}
-
-.bottomBorder p {
-    text-align: left;
-    align-self: flex-start;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-
 .bottomBorder p span {
     text-align: left;
     align-self: flex-start;
@@ -321,5 +305,76 @@ justify-content: space-between;
     text-decoration: none;
     font-weight: 600;
     color: rgba(16, 40, 68, 1);
-;
+}
+.detail .rightBodyLow-Left {
+    width: 70%;
+}
+.detail .rightBodyLow-Right {
+    width: 27%;
+}
+.leftContainer h2 {
+    color: #102844;
+    font-size: 20px;
+}
+.leftContainer .course-breadcrumb span {
+    color: #102844;
+}
+.rightContainer h2 {
+    color: #102844;
+    font-size: 20px;
+}
+.detail .bottomBorder {
+    border-bottom: none;
+    gap: 0px;
+    margin-bottom: 20px;
+}
+.detail .bottomBorder p {
+    align-items: center;
+    display: flex;
+    height: 68px;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+}
+.rightContainer .lesson-menu {
+    align-items: center;
+    align-self: flex-start;
+    color: #102844;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+
+.rightContainer .lesson-menu .symbol {
+    align-self: center;
+    border-radius: 50%;
+    background-color: #E9EDFE;
+    justify-content: center;
+    min-height: 40px;
+    min-width: 40px;
+}
+
+.detail .getStarted {
+    width: 140px;
+}
+
+.detail .article-module-drop p {
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 15px;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.detail .article-module-drop span {
+    align-self: center;
+}
+.detail .text-black {
+    color: #102844;
+}
+.module-assessment-link {
+    margin-left: 4px;
 }
