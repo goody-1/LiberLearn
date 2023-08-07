@@ -59,6 +59,79 @@ function CourseDetailContent() {
 
 export default CourseDetailContent;
 
+
+// function toggleLessons(button) {
+//   const lessonsList = button.nextElementSibling;
+
+//   if (lessonsList.style.display === 'none') {
+//     lessonsList.style.display = 'block';
+//     button.querySelector('.icon').style.transform = 'rotate(90deg)';
+//   } else {
+//     lessonsList.style.display = 'none';
+//     button.querySelector('.icon').style.transform = 'rotate(0deg)';
+//   }
+// }
+function Module(props) {
+  const [expandedModule, setExpandedModule] = useState(null);
+
+  const toggleLessons = (index) => {
+    if (expandedModule === index) {
+      setExpandedModule(null);
+    } else {
+      setExpandedModule(index);
+    }
+  };
+
+  return (
+    <article className="courseDetailArticle">
+      <div className="module-drop">
+        {props.courses &&
+          props.courses.map((course, index) => (
+            <div className={
+              `bottomBorder text-black ${expandedModule === index ? 'open' : ''}`
+              }  key={index}
+              >
+              <h3
+                className="dropdown-toggle"
+                onClick={() => toggleLessons(index)}
+              >
+                MODULE {index + 1} - {course.title}
+                <span className={`icon ${expandedModule === index ? 'open' : ''}`}>
+                  ▼
+                </span>
+              </h3>
+              {expandedModule === index && (
+                <ul>
+                  {course.lessons &&
+                    course.lessons.map((lesson, lessonIndex) => (
+                      <li
+                        key={lessonIndex}
+                        style={{ backgroundImage: `url(${PlayHub})` }}
+                      >
+                        {`Lesson ${lessonIndex + 1} : ${lesson.title}`}
+                        <span>
+                          <img src={MarkUp} alt="MarkUp"></img>
+                        </span>
+                      </li>
+                    ))}
+                </ul>
+              )}
+              <p>
+                <span className="TakeAssessment">
+                  {`You have completed Module ${index + 1}:`}
+                  <a href="assessment" className="module-assessment-link">
+                    Take Assessment
+                  </a>
+                </span>
+              </p>
+            </div>
+          ))}
+      </div>
+    </article>
+  );
+}
+
+
 // An Internal Component
 
 function CourseDetail(props) {
@@ -107,38 +180,9 @@ function CourseDetail(props) {
                 </div>
                 <Button buttonText="Go to Unit 2" />
               </div>
-              <article className="courseDetailArticle">
-                <div className="article-module-drop">
-                {
-                  props.courses && props.courses.map((course, index) => (
-                    <div className="bottomBorder text-black">
-                      <h3>
-                        MODULE {index + 1} - {props.title}
-                        <span>
-                          <img src={ItmUP} alt="ItmUp"></img>
-                        </span>
-                      </h3>
-                      {
-                        course.lessons && course.lessons.map((lesson, index) => (
-                          <p style={{ backgroundImage: `url(${PlayHub})` }}>
-                             {`Lesson ${index + 1} : ${lesson.title}`}
-                            <span>
-                              <img src={MarkUp} alt="MarkUp"></img>
-                            </span>
-                          </p>
-                        ))
-                      }
-                      <p>
-                        <span className="TakeAssessment">
-                          {`You have completed Module ${index + 1}:`}
-                          <a href="assessment" className="module-assessment-link">Take Assessment</a>
-                        </span>
-                      </p>
-                    </div>
-                  ))
-                }
-                </div>
-              </article>
+                  <Module
+                    courses = {props.courses}
+                  />
             </div>
           </div>
         </div>

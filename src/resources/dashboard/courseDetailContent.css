@@ -183,9 +183,9 @@ article {
 
 
 article h3 {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 article p {
@@ -360,15 +360,6 @@ justify-content: space-between;
     width: 140px;
 }
 
-.detail .article-module-drop p {
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: 15px;
-    padding-left: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 .detail .article-module-drop span {
     align-self: center;
 }
@@ -377,4 +368,37 @@ justify-content: space-between;
 }
 .module-assessment-link {
     margin-left: 4px;
+}
+.detail .module-drop li {
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 15px;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 68px;
+    width: 100%;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.icon {
+    font-size: 14px;
+    margin-right: 5px;
+    transition: transform 0.2s;
+}
+.open .icon {
+    transform: rotate(180deg);
+}
+
+.detail .lessons {
+    display: none;
+    margin-top: 5px;
+    padding-left: 20px;
 }
