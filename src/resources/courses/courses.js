@@ -18,6 +18,7 @@ function CoursesPage() {
         const mappedCourses = data.map(
           apiCourse => ({
             courseId: apiCourse.id,
+            courseSlug: apiCourse.slug,
             courseImage: apiCourse.image_link,
             courseName: apiCourse.title,
             courseInfo: apiCourse.info,
@@ -49,7 +50,7 @@ function CoursesPage() {
         <div className="courseDiv">
           {courses.map(
             course => (
-              <Link to={`/courses/${course.courseId}`} key={course.courseId}
+              <Link to={`/courses/${course.courseSlug}`} key={course.courseId}
                 className="course-card-link">
                 <CoursesDiv
                   key={course.courseName} // Assuming courseName is unique
