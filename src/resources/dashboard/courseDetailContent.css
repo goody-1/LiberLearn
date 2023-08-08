@@ -403,6 +403,17 @@ justify-content: space-between;
     margin-top: 5px;
     padding-left: 20px;
 }
-.lessons-links {
+.course-link {
     text-decoration: none;
+}
+.course-link h2 {
+    font-size: 17px;
+}
+.lessons-links {
+    color: #102844;
+    font-size: 14px;
+    text-decoration: none;
+}
+.course-link:hover h2, .lessons-links:hover li, .lessons-links:hover p div {
+    color: #00AEEF;
 }

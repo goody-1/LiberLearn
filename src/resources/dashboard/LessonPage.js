@@ -20,14 +20,13 @@ function LessonPage() {
         fetch(`https://liberlearn-backend.up.railway.app/api/courses/${moduleId}`)
         .then(response => response.json())
         .then(data => {
-          // console.log(data)
           if (data.lessons) {
             const selectedLesson = data.lessons.find(lesson => lesson.id === parseInt(lessonId));
-            console.log(selectedLesson);
             const updatedLesson = {
               ...selectedLesson,
               moduleId: data.id,
               moduleTitle: data.title,
+              moduleSlug: data.slug
             };
             setLesson(updatedLesson);
           }
@@ -63,6 +62,7 @@ function LessonPage() {
           contents = {lesson.contents}
           moduleId = {lesson.moduleId}
           moduleTitle = {lesson.moduleTitle}
+          moduleSlug = {lesson.moduleSlug}
         />
       </div>
     </div>
@@ -78,8 +78,17 @@ function LessonComponent(props) {
     fetch(`https://liberlearn-backend.up.railway.app/api/courses/${props.moduleId}`)
       .then(response => response.json())
       .then(data => {
-        // console.log(data)
-        setModule(data);
+        const subject = data.subject.replace("http", "https")
+        console.log(subject)
+        fetch(subject)
+        .then(response => response.json())
+        .then(result => {
+          const updatedData = {
+            ...data,
+            courseSlug: result.slug,
+          };
+          setModule(updatedData);
+        })
       })
       .catch(error => {
         console.error('Error fetching course details:', error);
@@ -134,6 +143,8 @@ function LessonComponent(props) {
         </div>
         <LessonsNav
           moduleId = {module.id}
+          moduleSlug = {module.slug}
+          courseSlug = {module.courseSlug}
           title = {module.title}
           lessons = {module.lessons}
         />
@@ -143,25 +154,28 @@ function LessonComponent(props) {
 }
 
 function LessonsNav(props) {
-
   return (
     <div className="rightBodyLow-Right">
       <div className="rightContainer">
         <h2>Module Overview</h2>
         <div className="bottomBorder">
-          <h2>MODULE {props.moduleId} - {props.title.toUpperCase()}</h2>
+          <a href={`/courses/${props.courseSlug}/detail`} className='course-link'>
+            <h2>MODULE {props.moduleId} - {props.title.toUpperCase()}</h2>
+          </a>
           {
             props.lessons && props.lessons.map((lesson, index) => (
-              <p>
-                <div className="lesson-menu">
-                  <span className="symbol">
-                    {`L${index + 1}`}
-                  </span>
-                  {lesson.title}
+              <a href={`/courses/${props.moduleSlug}/${lesson.id}`} className="lessons-links">
+                <p>
+                  <div className="lesson-menu">
+                    <span className="symbol">
+                      {`L${index + 1}`}
+                    </span>
+                    {lesson.title}
 
-                  {/* <img src={MarkUp} alt="MarkUp" /> */}
-                </div>
-              </p>
+                    {/* <img src={MarkUp} alt="MarkUp" /> */}
+                  </div>
+                </p>
+              </a>
             ))
           }
         </div>

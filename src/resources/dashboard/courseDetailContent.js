@@ -54,6 +54,7 @@ function CourseDetailContent() {
           info              = {course.info}
           intro_video       = {course.intro_video}
           number_of_courses = {course.number_of_courses}
+          slug              = {course.slug}
           courses           = {course.courses.sort(
                                 (a, b) => a.id - b.id
                               )}
@@ -129,7 +130,6 @@ function CourseDetail(props) {
                     {
                       course.lessons && course.lessons.map((lesson, index) => (
                         <a href={`/courses/${course.slug}/${lesson.id}`} className="lessons-links">
-                          {console.log(course.slug)}
                           <p>
                             <div className="lesson-menu">
                               <span className="symbol">
@@ -186,15 +186,17 @@ function Module(props) {
                 <ul>
                   {course.lessons &&
                     course.lessons.map((lesson, lessonIndex) => (
-                      <li
-                        key={lessonIndex}
-                        style={{ backgroundImage: `url(${PlayHub})` }}
-                      >
-                        {`Lesson ${lessonIndex + 1} : ${lesson.title}`}
-                        <span>
-                          <img src={MarkUp} alt="MarkUp"></img>
-                        </span>
-                      </li>
+                      <a href={`/courses/${course.slug}/${lesson.id}`} className="lessons-links">
+                        <li
+                          key={lessonIndex}
+                          style={{ backgroundImage: `url(${PlayHub})` }}
+                        >
+                          {`Lesson ${lessonIndex + 1} : ${lesson.title}`}
+                          <span>
+                            <img src={MarkUp} alt="MarkUp"></img>
+                          </span>
+                        </li>
+                      </a>
                     ))}
                 </ul>
               )}
