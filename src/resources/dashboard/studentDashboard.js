@@ -92,8 +92,9 @@ function StudentDashboard() {
                       title={course.title}
                       info={course.info}
                       image={course.image_link}
+                      slug = {course.slug}
                       action="Continue"
-                      url={`/courses/${course.id}`}
+                      url={`/courses/${course.slug}`}
                       courses={course.courses}
                     />
                   )
