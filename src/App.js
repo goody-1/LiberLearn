@@ -13,6 +13,7 @@ import AboutUsPage from "./resources/dashboard/AboutUs";
 import AssessmentPage from './resources/dashboard/assessmentPage';
 // import AssessmentFail from './resources/dashboard/assessmentFail';
 import CourseDetailsContent from './resources/dashboard/courseDetailContent';
+import LessonPage from './resources/dashboard/LessonPage';
 
 
 
@@ -25,15 +26,19 @@ function App() {
         <Route path="/student-dashboard" element={<StudentDashboard />}></Route>
         <Route path="/courses" element={<CoursesBody />}></Route>
         <Route
-          path="/courses/:courseId/detail"
+          path="/courses/:slug/detail"
           element={<CourseDetailsContent />}
         ></Route>
         <Route path="/about-us" element={<AboutUsPage />}></Route>
         <Route
-          path="/courses/:courseId"
+          path="/courses/:slug"
           element={<StudentCourseDetails />}
         ></Route>
-        <Route path="/assessment" element={<AssessmentPage />}></Route>
+        <Route
+          path="/courses/:slug/:lessonId"
+          element={<LessonPage />}
+        ></Route>
+        <Route path="/:slug/assessment" element={<AssessmentPage />}></Route>
 
         for assessment fail
         {/* <Route path="/trial-link" element={<AssessmentPassed />}></Route> */}
