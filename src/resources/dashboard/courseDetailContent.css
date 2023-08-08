@@ -325,6 +325,7 @@ justify-content: space-between;
 }
 .detail .bottomBorder {
     border-bottom: none;
+    display: block;
     gap: 0px;
     margin-bottom: 20px;
 }
@@ -401,4 +402,7 @@ justify-content: space-between;
     display: none;
     margin-top: 5px;
     padding-left: 20px;
+}
+.lessons-links {
+    text-decoration: none;
 }

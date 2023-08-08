@@ -3,28 +3,34 @@ import SideBar from "../sideBar";
 import TopBar from "../topBar";
 import Button from "../Navigation/button";
 import MarkUp from "../Image/image2/MarkUp.png";
-import ItmUP from "../Image/image2/ItmUP.png";
-import ItmDown from "../Image/image2/ItmDown.png";
 import PlayHub from "../Image/image2/PlayHub.png";
 import Avatar from "../Image/image2/Avatar.png";
 import React, { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
+import getIdFromSlug from "./getIdFromSlug";
 
 function CourseDetailContent() {
-  const { courseId } = useParams();
+  const { slug } = useParams();
   const [course, setCourse] = useState(null);
 
   useEffect(() => {
-    fetch(`https://liberlearn-backend.up.railway.app/api/subjects/${courseId}`)
-      .then(response => response.json())
-      .then(data => {
-        // console.log(data)
-        setCourse(data);
-      })
-      .catch(error => {
-        console.error('Error fetching course details:', error);
-      });
-  }, [courseId]);
+    async function fetchCourse() {
+      const courseId = await getIdFromSlug(slug);
+
+      if (courseId !== null) {
+        fetch(`https://liberlearn-backend.up.railway.app/api/subjects/${courseId}`)
+        .then(response => response.json())
+        .then(data => {
+          setCourse(data);
+        })
+        .catch(error => {
+          console.error('Error fetching course details:', error);
+        });
+      }
+    }
+
+    fetchCourse();
+  }, [slug]);
 
   if (!course) {
     return <div>Loading...</div>;
@@ -59,80 +65,7 @@ function CourseDetailContent() {
 
 export default CourseDetailContent;
 
-
-// function toggleLessons(button) {
-//   const lessonsList = button.nextElementSibling;
-
-//   if (lessonsList.style.display === 'none') {
-//     lessonsList.style.display = 'block';
-//     button.querySelector('.icon').style.transform = 'rotate(90deg)';
-//   } else {
-//     lessonsList.style.display = 'none';
-//     button.querySelector('.icon').style.transform = 'rotate(0deg)';
-//   }
-// }
-function Module(props) {
-  const [expandedModule, setExpandedModule] = useState(null);
-
-  const toggleLessons = (index) => {
-    if (expandedModule === index) {
-      setExpandedModule(null);
-    } else {
-      setExpandedModule(index);
-    }
-  };
-
-  return (
-    <article className="courseDetailArticle">
-      <div className="module-drop">
-        {props.courses &&
-          props.courses.map((course, index) => (
-            <div className={
-              `bottomBorder text-black ${expandedModule === index ? 'open' : ''}`
-              }  key={index}
-              >
-              <h3
-                className="dropdown-toggle"
-                onClick={() => toggleLessons(index)}
-              >
-                MODULE {index + 1} - {course.title}
-                <span className={`icon ${expandedModule === index ? 'open' : ''}`}>
-                  ▼
-                </span>
-              </h3>
-              {expandedModule === index && (
-                <ul>
-                  {course.lessons &&
-                    course.lessons.map((lesson, lessonIndex) => (
-                      <li
-                        key={lessonIndex}
-                        style={{ backgroundImage: `url(${PlayHub})` }}
-                      >
-                        {`Lesson ${lessonIndex + 1} : ${lesson.title}`}
-                        <span>
-                          <img src={MarkUp} alt="MarkUp"></img>
-                        </span>
-                      </li>
-                    ))}
-                </ul>
-              )}
-              <p>
-                <span className="TakeAssessment">
-                  {`You have completed Module ${index + 1}:`}
-                  <a href="assessment" className="module-assessment-link">
-                    Take Assessment
-                  </a>
-                </span>
-              </p>
-            </div>
-          ))}
-      </div>
-    </article>
-  );
-}
-
-
-// An Internal Component
+// Internal Components
 
 function CourseDetail(props) {
   return (
@@ -188,23 +121,26 @@ function CourseDetail(props) {
         </div>
         <div className="rightBodyLow-Right">
           <div className="rightContainer">
-            <h2>Basics Overview</h2>
+            <h2>Course Overview</h2>
               {
                 props.courses && props.courses.map((course, index) => (
                   <div className="bottomBorder">
                     <h2>MODULE {index + 1} - {course.title.toUpperCase()}</h2>
                     {
                       course.lessons && course.lessons.map((lesson, index) => (
-                        <p>
-                          <div className="lesson-menu">
-                            <span className="symbol">
-                              {`L${index + 1}`}
-                            </span>
-                            {lesson.title}
+                        <a href={`/courses/${course.slug}/${lesson.id}`} className="lessons-links">
+                          {console.log(course.slug)}
+                          <p>
+                            <div className="lesson-menu">
+                              <span className="symbol">
+                                {`L${index + 1}`}
+                              </span>
+                              {lesson.title}
 
-                            <img src={MarkUp} alt="MarkUp" />
-                          </div>
-                        </p>
+                              <img src={MarkUp} alt="MarkUp" />
+                            </div>
+                          </p>
+                        </a>
                       ))
                     }
                   </div>
@@ -214,7 +150,66 @@ function CourseDetail(props) {
         </div>
       </div>
     </section>
-
-
   );
 }
+
+function Module(props) {
+  const [expandedModule, setExpandedModule] = useState(null);
+
+  const toggleLessons = (index) => {
+    if (expandedModule === index) {
+      setExpandedModule(null);
+    } else {
+      setExpandedModule(index);
+    }
+  };
+
+  return (
+    <article className="courseDetailArticle">
+      <div className="module-drop">
+        {props.courses &&
+          props.courses.map((course, index) => (
+            <div className={
+              `bottomBorder text-black ${expandedModule === index ? 'open' : ''}`
+              }  key={index}
+              >
+              <h3
+                className="dropdown-toggle"
+                onClick={() => toggleLessons(index)}
+              >
+                MODULE {index + 1} - {course.title}
+                <span className={`icon ${expandedModule === index ? 'open' : ''}`}>
+                  ▼
+                </span>
+              </h3>
+              {expandedModule === index && (
+                <ul>
+                  {course.lessons &&
+                    course.lessons.map((lesson, lessonIndex) => (
+                      <li
+                        key={lessonIndex}
+                        style={{ backgroundImage: `url(${PlayHub})` }}
+                      >
+                        {`Lesson ${lessonIndex + 1} : ${lesson.title}`}
+                        <span>
+                          <img src={MarkUp} alt="MarkUp"></img>
+                        </span>
+                      </li>
+                    ))}
+                </ul>
+              )}
+              <p>
+                <span className="TakeAssessment">
+                  {`You have completed Module ${index + 1}:`}
+                  <a href={`/${course.slug}/assessment`} className="module-assessment-link">
+                    Take Assessment
+                  </a>
+                </span>
+              </p>
+            </div>
+          ))}
+      </div>
+    </article>
+  );
+}
+

@@ -12,22 +12,30 @@ import TCI8 from "../Image/image2/TCI8.png";
 
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import getIdFromSlug from './getIdFromSlug'
 
 function StudentCourseDetails() {
-  const { courseId } = useParams();
+  const { slug } = useParams();
   const [course, setCourse] = useState(null);
 
   useEffect(() => {
-    fetch(`https://liberlearn-backend.up.railway.app/api/subjects/${courseId}`)
-      .then(response => response.json())
-      .then(data => {
-        console.log(data)
-        setCourse(data);
-      })
-      .catch(error => {
-        console.error('Error fetching course details:', error);
-      });
-  }, [courseId]);
+    async function fetchCourse() {
+      const courseId = await getIdFromSlug(slug);
+
+      if (courseId !== null) {
+        fetch(`https://liberlearn-backend.up.railway.app/api/subjects/${courseId}`)
+        .then(response => response.json())
+        .then(data => {
+          setCourse(data);
+        })
+        .catch(error => {
+          console.error('Error fetching course details:', error);
+        });
+      }
+    }
+
+    fetchCourse();
+  }, [slug]);
 
   if (!course) {
     return <div>Loading...</div>;
@@ -47,6 +55,7 @@ function StudentCourseDetails() {
         <CourseDetail
           key               = {course.id}
           id                = {course.id}
+          slug              = {course.slug}
           title             = {course.title}
           info              = {course.info}
           intro_video       = {course.intro_video}
@@ -57,7 +66,6 @@ function StudentCourseDetails() {
     </div>
   );
 }
-
 export default StudentCourseDetails;
 
 // An Internal Component
@@ -104,8 +112,7 @@ function CourseDetail(props) {
         <div className="rightBodyLow-Right">
           <div className="rightContainer">
             <div className="bottomBorder">
-              {/* <a href="/enroll" className="enrollBtn"> */}
-              <a href={`/courses/${props.id}/detail`} className="enrollBtn">
+              <a href={`/courses/${props.slug}/detail`} className="enrollBtn">
                 Enroll
               </a>
             </div>
@@ -194,3 +201,4 @@ function CourseDetail(props) {
     </section>
   );
 }
+
