@@ -63,11 +63,10 @@ function AboutUsPage() {
           style={{ backgroundImage: `url(${VisionImage})` }}
         ></div>
         <div className="VisionB">
-          <h1 className="VisionTag">Our Vision</h1>
+          <h1 className="VisionTag">Our Vision </h1>
           <p>
-            To be the most accessible and valuable <br></br>platform for
-            educational and rehabilitation <br></br> processes specially
-            designed for juvenile <br></br> offenders.
+            To be the most accessible and valuable platform for educational and rehabilitation
+            processes specially designed for juvenile offenders.
           </p>
         </div>
       </div>

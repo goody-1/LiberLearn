@@ -8,7 +8,7 @@
 }
 
 .leftBodyOO {
-  width: 20%;
+  width: 18%;
   height: 100%;
   background: linear-gradient(205.17deg, #2E3192 10.93%, #00AEEF 116.08%);
   padding: 20px;
@@ -16,7 +16,7 @@
 }
 
 .rightBody {
-  width: 80%;
+  width: 82%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -104,7 +104,7 @@
 }
 
 .detTopI {
-  width: 70%;
+  /* width: 70%; */
   display: flex;
   gap: 5px;
   align-items: center;
@@ -183,7 +183,7 @@
 }
 
 .rightBodyLow {
-  width: 95%;
+  width: 97%;
   height: 65%;
   display: flex;
   justify-content: space-between;
@@ -193,7 +193,7 @@
 }
 
 .rightBodyLow-Left {
-  width: 70%;
+  width: 74%;
   height: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -207,7 +207,7 @@
 }
 
 .rightBodyLow-Right-SDB {
-  width: 25%;
+  width: 24%;
   height: 100%;
   box-sizing: border-box;
   display: flex;
@@ -216,8 +216,8 @@
 }
 
 .componentCourseA {
-    width: 240px;
-    height: 280px;
+    width: 30%;
+    /* height: 280px; */
     border-radius: 15px;
     box-sizing: border-box;
     display: flex;
@@ -229,6 +229,7 @@
     font-size: 13px;
     font-weight: 600;
     text-align: left;
+    margin-bottom: 20px;
 }
 
 .infoInsert {
@@ -294,4 +295,11 @@
   border-radius: 15px;
   margin-top:20px;
   box-sizing: border-box;
+}
+
+.student-course-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
 }
