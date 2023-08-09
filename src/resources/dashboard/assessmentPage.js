@@ -1,5 +1,5 @@
 import "./assessmentPage.css";
-import cancelIcon from "../Image/image2/cancel icon.png";
+// import cancelIcon from "../Image/image2/cancel icon.png";
 import SideBar from "../sideBar";
 import TopBar from "../topBar";
 import userImage from "../Image/image2/userImage.png";
@@ -7,6 +7,7 @@ import Button from "../Navigation/button";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import getModuleIdFromSlug from "./getModuleIdFromSlug";
+import { Link } from "react-router-dom";
 
 function AssessmentPage() {
   const { slug } = useParams();
@@ -20,10 +21,8 @@ function AssessmentPage() {
         fetch(`https://liberlearn-backend.up.railway.app/api/assessments`)
         .then(response => response.json())
         .then(assessments => {
-          // console.log(assessments)
           if (assessments) {
             const dAssessment = assessments.find(assessment => assessment.course === parseInt(moduleId));
-            console.log(dAssessment);
             setAssessment(dAssessment);
           }
         })
@@ -61,8 +60,38 @@ function AssessmentPage() {
 }
 export default AssessmentPage;
 
-
 function Assessment(props) {
+  const [selectedAnswers, setSelectedAnswers] = useState({});
+  const handleAnswerSelection = (questionId, choiceId, isCorrect) => {
+    setSelectedAnswers(prevAnswers => ({
+      ...prevAnswers,
+      [questionId]: {
+        choiceId,
+        isCorrect,
+      },
+    }));
+  };
+  const calculateCorrectAnswers = () => {
+    let correctCount = 0;
+    props.questions.forEach(question => {
+      const userAnswer = selectedAnswers[question.id];
+      if (userAnswer && userAnswer.isCorrect) {
+        correctCount++;
+      }
+    });
+    return correctCount;
+  };
+  const correctCount = calculateCorrectAnswers();
+  const passPercentage = (correctCount / props.questions.length) * 100;
+  const isModulePassed = () => {
+    return passPercentage >= 80;
+  };
+  // const handleSubmit = () => {
+  //   if (isModulePassed()) {
+  //   } else {
+  //   }
+  // };
+  const score = passPercentage;
   return (
     <section className="assPageRightSection">
       <div className="assPageTop">
@@ -70,7 +99,9 @@ function Assessment(props) {
           <h2>Discover</h2>
           <p className="text-faint">Courses &gt; Computer Programming &gt;<span> {props.title}</span> </p>
         </div>
-        <Button url="/trial-link" buttonText="Submit" />
+        <Link to={isModulePassed() ? `/module-passed?score=${score}` : `/module-failed?score=${score}`}>
+          <Button buttonText="Submit" />
+        </Link>
       </div>
       <div className="assPageLower">
         <h1>WELCOME!</h1>
@@ -80,19 +111,25 @@ function Assessment(props) {
           <br />
           Choose the correct option
         </p>
-
         {
           props.questions && props.questions.map((question, index) =>  (
-            <form className="assessmentForm">
+            <form className="assessmentForm" key={question.id}>
               <p>
                 <span className="Ash">Question {index + 1}/{props.questions.length}</span>
                 {question.text}
               </p>
               {
                 question.choices && question.choices.map(choice => (
-                  <label className="inputType">
+                  <label className="inputType"  key={choice.id}>
                     <span>{choice.text}</span>{" "}
-                    <input type="radio" name={`question_${question.id}`} value={choice.is_correct} />
+                    <input
+                      type="radio"
+                      name={`question_${question.id}`}
+                      value={choice.is_correct}
+                      onChange={() => handleAnswerSelection(
+                        question.id, choice.id, choice.is_correct
+                      )}
+                    />
                   </label>
                 ))
               }
@@ -103,3 +140,5 @@ function Assessment(props) {
     </section>
   )
 }
+
+
