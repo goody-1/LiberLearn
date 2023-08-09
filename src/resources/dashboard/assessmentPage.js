@@ -84,7 +84,7 @@ function Assessment(props) {
   const correctCount = calculateCorrectAnswers();
   const passPercentage = (correctCount / props.questions.length) * 100;
   const isModulePassed = () => {
-    return passPercentage >= 80;
+    return passPercentage >= 70;
   };
   // const handleSubmit = () => {
   //   if (isModulePassed()) {
