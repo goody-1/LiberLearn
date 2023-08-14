@@ -1,0 +1,38 @@
+header {
+    align-items: center;
+    display: flex;
+    background-color: white;
+    /* height: 2.8rem; */
+    justify-content: space-between;
+    /* margin-top: 8vh;
+    margin-bottom: 10vh; */
+    padding: 10vh 0;
+    position: fixed;
+    width: 90%;
+    z-index: 10;
+}
+header img {
+    width: 24%;
+}
+nav {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    width: 50%;
+}
+nav ul {
+    align-items: center;
+    display: flex;
+    font-size: 1.1em;
+    font-weight: 500;
+    justify-content: space-between;
+    list-style: none;
+    width: 100%;
+}
+header .home-active a,
+header .about-active a,
+header .contact-active a,
+header .courses-active a {
+    color: #00AEEF;
+}

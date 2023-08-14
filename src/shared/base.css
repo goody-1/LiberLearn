@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: #102844;
+    font-family: Poppins;
+    font-size: 16px;
+}
+a {
+    color: #102844;
+    text-decoration: none;
+}
+
+/* Base classes styles */
+.text-faint {
+    color: #767278;
+}
+.background-purple {
+    background-color: #2E3192;
+}
+.purple {
+    color: #2E3192;
+}
+.blue {
+    color: #00AEEF;
+}

@@ -1,0 +1,42 @@
+.text-faint {
+    color: #3B3F5C;
+}
+
+.landing {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 90%;
+}
+.landing-sections {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40vh;
+    text-align: left;
+}
+.landing-sections section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.get-started .left .get-started .right {
+    align-items: flex-start;
+    display: flex;
+    height: 90%;
+    background-color: white;
+}.get-started .left p {
+    align-self: flex-start;
+}
+.get-started .motto {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Clash Display';
+    font-size: 4em;
+    font-weight: 600;
+    position: relative;
+}
+.get-started .motto > span {
+    display: block;
+}
