@@ -5,7 +5,7 @@
 .assessmentPageBody {
   color: #102844;
   width: 100%;
-  min-height: 90vh;
+  height: 100vh;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
