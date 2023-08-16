@@ -12,13 +12,13 @@ function DivFour() {
         <Mentors
           image={mentor1}
           mentor="Oluwaseyi Sorinade"
-          title="Mathematics Tutor"
+          title="Mathematics"
           information="Passionate about numbers and problem-solving, our math tutor helps students excel in algebra, geometry, and calculus, making math enjoyable."
         />
         <Mentors
           image={mentor2}
           mentor="Goodness Atunde"
-          title="English Tutor"
+          title="English"
           information="Our English tutor fosters language proficiency and a love for literature, guiding students in grammar, vocabulary, and creative writing.."
         />
         <Mentors
