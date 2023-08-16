@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../../components/Landing/Header";
 import Button from "../../components/Landing/Button";
 import Footer from "../../components/Landing/Footer";
+import teaching from '../../resources/images/teaching.png'
 import './Landing.css'
 
 function LandingPage() {
@@ -11,7 +12,7 @@ function LandingPage() {
       <div className="landing-sections">
         <section className="get-started">
           <div className="left">
-            <div className="green-circle big-cicle"></div>
+            <div className="green-circle big-circle"></div>
             <h1 className="motto">
               <span className="purple">
                 <span className="blue">Empowering</span> Minds,
@@ -24,13 +25,14 @@ function LandingPage() {
               We are committed to providing exceptional, <br />
               learning experience that is engaging, interactive and fun.
             </p>
-            <div className="green-cicle small-circle"></div>
+            <div className="green-circle small-circle"></div>
             <Button url="#" buttonText="Get Started" />
           </div>
           <div className="right">
-            <div className="shape1"></div>
-            <div className="get-started-img"></div>
-            <div className="shape2"></div>
+            <div className="rounded-square shape1"></div>
+            <img className="get-started-img" src={teaching}
+              alt="Teaching two pupils at a desk" />
+            <div className="rounded-square shape2"></div>
           </div>
         </section>
         <section className="know-more">
