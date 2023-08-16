@@ -2,6 +2,7 @@ footer {
     align-items: center;
     color: white;
     display: flex;
+    flex-basis: content;
     flex-direction: column;
     height: 60vh;
     margin-top: auto;

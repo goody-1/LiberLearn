@@ -6,9 +6,9 @@ header {
     justify-content: space-between;
     /* margin-top: 8vh;
     margin-bottom: 10vh; */
-    padding: 10vh 0;
+    padding: 10vh 5%;
     position: fixed;
-    width: 90%;
+    width: 100%;
     z-index: 10;
 }
 header img {
@@ -24,7 +24,7 @@ nav {
 nav ul {
     align-items: center;
     display: flex;
-    font-size: 1.1em;
+    font-size: 0.94em;
     font-weight: 500;
     justify-content: space-between;
     list-style: none;
@@ -35,4 +35,11 @@ header .about-active a,
 header .contact-active a,
 header .courses-active a {
     color: #00AEEF;
+}
+
+/* smaller screens */
+@media (max-width: 830px) {
+    .header nav {
+        width: 60%;
+    }
 }

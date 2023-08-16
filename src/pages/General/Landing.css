@@ -12,31 +12,166 @@
 .landing-sections {
     display: flex;
     flex-direction: column;
-    margin-top: 40vh;
+    margin-top: 30vh;
     text-align: left;
+    width: 100%;
 }
 .landing-sections section {
     display: flex;
+    flex-basis: fit-content;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
 }
-.get-started .left .get-started .right {
-    align-items: flex-start;
-    display: flex;
-    height: 90%;
+.landing-sections .get-started {
+    height: 55vh;
+    justify-content: flex-start;
+    margin-bottom: 5vh;
+}
+.get-started .left, .get-started .right {
     background-color: white;
-}.get-started .left p {
+    display: flex;
+}
+.get-started .left {
+    aspect-ratio: 1 / 1;
+    justify-content: center;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    width: 50%;
+}
+.get-started .left p {
     align-self: flex-start;
+    font-size: 1.3vw;
+    z-index: 2;
+}
+.left .green-circle {
+    background-color: #33EFA0;
+    border-radius: 50%;
+    position: relative;
+}
+.left .big-circle {
+    height: 10%;
+    left: -2%;
+    top: 30px;
+    width: 10%;
+}
+.left .small-circle {
+    align-self: end;
+    height: 5%;
+    right: 15%;
+    bottom: 4.0%;
+    width: 5%;
 }
 .get-started .motto {
     display: flex;
     flex-direction: column;
     font-family: 'Clash Display';
-    font-size: 4em;
+    font-size: 4.2vw;
     font-weight: 600;
     position: relative;
 }
 .get-started .motto > span {
     display: block;
+}
+.get-started .left .buttons {
+    font-size: 1.2vw;
+    margin-top: 2%;
+}
+.get-started .right {
+    /* margin-left: 4%; */
+    width: 40%;
+    aspect-ratio: 1 / 1;
+}
+.get-started-img {
+    align-self: center;
+    width: 90%;
+    /* height: 90%; */
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+.right .rounded-square {
+    border-radius: 8%;
+    max-height: 0%;
+    position: relative;
+}
+.right .shape1 {
+    background-color: #23BDEE;
+    left: 18%;
+    min-width: 26%;
+    padding-bottom: 26%;
+    top: 10%;
+}
+.right .shape2 {
+    background-color: #33EFA0;
+    min-width: 38%;
+    padding-bottom: 38%;
+    right: 28%;
+    top: 63%;
+}
+
+
+/* smaller screens */
+@media (max-width: 850px) {
+    .get-started .motto {
+        font-size: 6.5vw;
+    }
+    .get-started .left p {
+        font-size: 1.6vw;
+        z-index: 2;
+    }
+}
+@media (max-width: 500px) {
+    .landing-sections section {
+        align-items: center;
+        flex-direction: column;
+    }
+    .get-started .left {
+        aspect-ratio: auto;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    .get-started .motto {
+        font-size: 8.5vw;
+    }
+    .get-started .left p {
+        font-size: 3vw;
+        z-index: 2;
+    }
+    .left .green-circle {
+        aspect-ratio: 1 / 1;
+    }
+    .left .big-circle {
+        top: 20px;
+    }
+    .left .small-circle {
+        right: 2%;
+        top: -15px;
+    }
+    .get-started .left .buttons {
+        font-size: 2.1vw;
+    }
+    .get-started .right {
+        aspect-ratio: 1 / 1;
+        flex-direction: column;
+        flex-flow: row;
+        width: 100%;
+    }
+    .get-started-img {
+        left: -20%;
+        top: 2%;
+        width: 84%;
+    }
+    .right .shape1 {
+        left: 0%;
+        max-width: 10%;
+        padding-bottom: 30%;
+        top: 5%;
+    }
+    .right .shape2 {
+        min-width: 38%;
+        padding-bottom: 38%;
+        right: 52%;
+        top: 63%;
+    }
 }
