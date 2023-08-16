@@ -40,6 +40,21 @@ function AboutUsPage() {
           world beyond those walls.
         </p>
       </div>
+
+      <div className="AboutUsVision">
+        <div
+          className="VisionA"
+          style={{ backgroundImage: `url(${VisionImage})` }}
+        ></div>
+        <div className="VisionB">
+          <h1 className="VisionTag">Our Vision </h1>
+          <p>
+            To be the most accessible and valuable platform for educational and rehabilitation
+            processes specially designed for juvenile offenders.
+          </p>
+        </div>
+      </div>
+
       <div className="AboutUsMission">
         <div className="MissionA">
           <h1 className="MissionTag">Our Mission </h1>
@@ -55,20 +70,6 @@ function AboutUsPage() {
           className="MissionB"
           style={{ backgroundImage: `url(${OurMission})` }}
         ></div>
-      </div>
-
-      <div className="AboutUsVision">
-        <div
-          className="VisionA"
-          style={{ backgroundImage: `url(${VisionImage})` }}
-        ></div>
-        <div className="VisionB">
-          <h1 className="VisionTag">Our Vision </h1>
-          <p>
-            To be the most accessible and valuable platform for educational and rehabilitation
-            processes specially designed for juvenile offenders.
-          </p>
-        </div>
       </div>
 
       <Footer />
