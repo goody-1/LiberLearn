@@ -37,7 +37,7 @@ function AssessmentPassed() {
           </div>
           <div className="btnHome">
             <Button
-              url="/"
+              url="/student-dashboard"
               bgColor="rgba(46, 49, 146, 1)"
               buttonText="Home"
             />
