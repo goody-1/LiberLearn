@@ -11,6 +11,7 @@ function AssessmentFail() {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const score = searchParams.get('score');
+  const retake_page = searchParams.get('retake')
 
   return (
     <div className="assessmentFailBody">
@@ -37,8 +38,8 @@ function AssessmentFail() {
             <img src={cancelIcon} alt="assessment failed" />
           </div>
           <div className="btnRetake">
-            <Button url="/" bgColor='rgba(39, 174, 96, 1)'
- buttonText="Retake" />
+            <Button url={retake_page} bgColor='rgba(39, 174, 96, 1)'
+              buttonText="Retake" newPage={false} />
           </div>
         </section>
       </div>
