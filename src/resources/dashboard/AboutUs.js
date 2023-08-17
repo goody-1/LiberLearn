@@ -16,7 +16,7 @@ function AboutUsPage() {
 
       <div className="AboutUse">
         <h1>
-          <h1 className="AboutUsH1">About us</h1>
+          <h1 className="AboutUsH1">Who we are</h1>
         </h1>
         <p>
           At LiberLearn, we are driven by a profound mission to rescue, empower,
