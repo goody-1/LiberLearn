@@ -29,12 +29,9 @@ function DivTwo() {
           <h1>About us</h1>
           <p>
             Welcome to our educational website, where we ensure juvenile
-            correctional children have access to education.
-          </p>
-          <p>
+            correctional children have access to education. <br />
             We aim to create an engaging and interactive learning experience.
           </p>
-
           <div className="buttonDivTwo">
             <a
               href="about-us"
