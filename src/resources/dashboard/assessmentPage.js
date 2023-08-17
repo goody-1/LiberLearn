@@ -71,6 +71,7 @@ function Assessment(props) {
       },
     }));
   };
+  const currentUrl = window.location.href;
   const calculateCorrectAnswers = () => {
     let correctCount = 0;
     props.questions.forEach(question => {
@@ -133,7 +134,8 @@ function Assessment(props) {
             </form>
           ))
         }
-        <Link className="no-link-style" to={isModulePassed() ? `/module-passed?score=${score}` : `/module-failed?score=${score}`}>
+        <Link className="no-link-style" to={isModulePassed() ? `/module-passed?score=${score}` :
+          `/module-failed?score=${score}&retake=${encodeURIComponent(currentUrl)}`}>
           <Button buttonText="Submit" />
         </Link>
       </div>

@@ -4,14 +4,13 @@ import logo from '../Image/Logo & Mark Dark.png'
 import Button from "../Navigation/button";
 
 
-function Header (props) {
+function Header(props) {
   return (
     <header>
       <div className="headerContent">
-        <div className="logo">
+        <a href='/' className="logo">
           <img src={logo} alt="Logo" />
-          <h1>Landing Page</h1>
-        </div>
+        </a>
         <nav>
           <ul>
             <li className={props.homeActive}>
@@ -28,7 +27,7 @@ function Header (props) {
             </li>
           </ul>
         </nav>
-        <Button url="login" buttonText="Login" />
+        <Button url="login" buttonText="Login" newPage={true} />
       </div>
     </header>
   );

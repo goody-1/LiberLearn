@@ -46,12 +46,13 @@ header {
     border: none;
     border-radius: 5px;
   }
-  
+
   .logo {
     display: flex;
     align-items: center;
+    padding-right: 18%;
   }
-  
+
   .logo img {
     height: 40px;
     margin-right: 10px;
