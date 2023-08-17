@@ -11,7 +11,9 @@ function SideBar(props) {
   return (
     <section>
       <div className="sideBarA">
-        <img className="sideBarAImage" src={Layer2} alt="Layer2" />
+        <a href="/student-dashboard">
+          <img className="sideBarAImage" src={Layer2} alt="Layer2" />
+        </a>
         <p>
           <a href="/student-dashboard">
             <img className="HOUSE" src={house} alt="house" /> Home
