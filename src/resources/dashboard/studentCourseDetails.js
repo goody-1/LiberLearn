@@ -13,6 +13,7 @@ import TCI8 from "../Image/image2/TCI8.png";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import getIdFromSlug from './getIdFromSlug'
+import { COURSES } from "../../utils/appRoutes";
 
 function StudentCourseDetails() {
   const { slug } = useParams();
@@ -24,13 +25,13 @@ function StudentCourseDetails() {
 
       if (courseId !== null) {
         fetch(`https://liberlearn-backend.up.railway.app/api/subjects/${courseId}`)
-        .then(response => response.json())
-        .then(data => {
-          setCourse(data);
-        })
-        .catch(error => {
-          console.error('Error fetching course details:', error);
-        });
+          .then(response => response.json())
+          .then(data => {
+            setCourse(data);
+          })
+          .catch(error => {
+            console.error('Error fetching course details:', error);
+          });
       }
     }
 
@@ -53,14 +54,14 @@ function StudentCourseDetails() {
         </div>
 
         <CourseDetail
-          key               = {course.id}
-          id                = {course.id}
-          slug              = {course.slug}
-          title             = {course.title}
-          info              = {course.info}
-          intro_video       = {course.intro_video}
-          number_of_courses = {course.number_of_courses}
-          courses           = {course.courses}
+          key={course.id}
+          id={course.id}
+          slug={course.slug}
+          title={course.title}
+          info={course.info}
+          intro_video={course.intro_video}
+          number_of_courses={course.number_of_courses}
+          courses={course.courses}
         />
       </div>
     </div>
@@ -112,7 +113,7 @@ function CourseDetail(props) {
         <div className="rightBodyLow-Right">
           <div className="rightContainer">
             <div className="bottomBorder">
-              <a href={`/courses/${props.slug}/detail`} className="enrollBtn">
+              <a href={`${COURSES}/${props.slug}/detail`} className="enrollBtn">
                 Enroll
               </a>
             </div>
@@ -134,7 +135,7 @@ function CourseDetail(props) {
                   <img src={TCI2} alt="TCI2"></img>
                   {props.courses.length > 0 ? (
                     <>
-                      { props.courses.reduce(
+                      {props.courses.reduce(
                         (totalStudents, course) => totalStudents + course.number_of_students, 0)
                       } Students
                     </>
@@ -148,7 +149,7 @@ function CourseDetail(props) {
                   <img src={TCI3} alt="TCI3"></img>
                   {props.courses.length > 0 ? (
                     <>
-                      { props.courses.reduce(
+                      {props.courses.reduce(
                         (totalLessons, course) => totalLessons + course.lessons.length, 0)
                       } Lessons (10h 5m)
                     </>

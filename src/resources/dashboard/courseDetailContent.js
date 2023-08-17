@@ -8,6 +8,7 @@ import Avatar from "../Image/image2/Avatar.png";
 import React, { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import getIdFromSlug from "./getIdFromSlug";
+import { ASSESSMENT, COURSES } from "../../utils/appRoutes";
 
 function CourseDetailContent() {
   const { slug } = useParams();
@@ -19,13 +20,13 @@ function CourseDetailContent() {
 
       if (courseId !== null) {
         fetch(`https://liberlearn-backend.up.railway.app/api/subjects/${courseId}`)
-        .then(response => response.json())
-        .then(data => {
-          setCourse(data);
-        })
-        .catch(error => {
-          console.error('Error fetching course details:', error);
-        });
+          .then(response => response.json())
+          .then(data => {
+            setCourse(data);
+          })
+          .catch(error => {
+            console.error('Error fetching course details:', error);
+          });
       }
     }
 
@@ -48,16 +49,16 @@ function CourseDetailContent() {
         </div>
 
         <CourseDetail
-          key               = {course.id}
-          id                = {course.id}
-          title             = {course.title}
-          info              = {course.info}
-          intro_video       = {course.intro_video}
-          number_of_courses = {course.number_of_courses}
-          slug              = {course.slug}
-          courses           = {course.courses.sort(
-                                (a, b) => a.id - b.id
-                              )}
+          key={course.id}
+          id={course.id}
+          title={course.title}
+          info={course.info}
+          intro_video={course.intro_video}
+          number_of_courses={course.number_of_courses}
+          slug={course.slug}
+          courses={course.courses.sort(
+            (a, b) => a.id - b.id
+          )}
         />
       </div>
     </div>
@@ -98,7 +99,7 @@ function CourseDetail(props) {
 
               <div className="directToUnit">
                 <div className="dirToUnit-Container">
-                  <p  className="text-black">Module 1 of {props.number_of_courses}</p>
+                  <p className="text-black">Module 1 of {props.number_of_courses}</p>
                   <p>Module 1 - Introduction</p>
                   <div className="hr-lightOrange">
                     <div className="hr-orange"></div>
@@ -114,38 +115,38 @@ function CourseDetail(props) {
                 </div>
                 <Button buttonText="Go to Unit 2" />
               </div>
-                  <Module
-                    courses = {props.courses}
-                  />
+              <Module
+                courses={props.courses}
+              />
             </div>
           </div>
         </div>
         <div className="rightBodyLow-Right">
           <div className="rightContainer">
             <h2>Course Overview</h2>
-              {
-                props.courses && props.courses.map((course, index) => (
-                  <div className="bottomBorder">
-                    <h2>MODULE {index + 1} - {course.title.toUpperCase()}</h2>
-                    {
-                      course.lessons && course.lessons.map((lesson, index) => (
-                        <a href={`/courses/${course.slug}/${lesson.id}`} className="lessons-links">
-                          <p>
-                            <div className="lesson-menu">
-                              <span className="symbol">
-                                {`L${index + 1}`}
-                              </span>
-                              {lesson.title}
+            {
+              props.courses && props.courses.map((course, index) => (
+                <div className="bottomBorder">
+                  <h2>MODULE {index + 1} - {course.title.toUpperCase()}</h2>
+                  {
+                    course.lessons && course.lessons.map((lesson, index) => (
+                      <a href={`${COURSES}/${course.slug}/${lesson.id}`} className="lessons-links">
+                        <p>
+                          <div className="lesson-menu">
+                            <span className="symbol">
+                              {`L${index + 1}`}
+                            </span>
+                            {lesson.title}
 
-                              <img src={MarkUp} alt="MarkUp" />
-                            </div>
-                          </p>
-                        </a>
-                      ))
-                    }
-                  </div>
-                ))
-              }
+                            <img src={MarkUp} alt="MarkUp" />
+                          </div>
+                        </p>
+                      </a>
+                    ))
+                  }
+                </div>
+              ))
+            }
           </div>
         </div>
       </div>
@@ -171,8 +172,8 @@ function Module(props) {
           props.courses.map((course, index) => (
             <div className={
               `bottomBorder text-black ${expandedModule === index ? 'open' : ''}`
-              }  key={index}
-              >
+            } key={index}
+            >
               <h3
                 className="dropdown-toggle"
                 onClick={() => toggleLessons(index)}
@@ -186,7 +187,7 @@ function Module(props) {
                 <ul>
                   {course.lessons &&
                     course.lessons.map((lesson, lessonIndex) => (
-                      <a href={`/courses/${course.slug}/${lesson.id}`} className="lessons-links">
+                      <a href={`${COURSES}/${course.slug}/${lesson.id}`} className="lessons-links">
                         <li
                           key={lessonIndex}
                           style={{ backgroundImage: `url(${PlayHub})` }}
@@ -203,7 +204,7 @@ function Module(props) {
               <p>
                 <span className="TakeAssessment">
                   {`You have completed Module ${index + 1}:`}
-                  <a href={`/${course.slug}/assessment`} className="module-assessment-link">
+                  <a href={`/${course.slug}/${ASSESSMENT}`} className="module-assessment-link">
                     Take Assessment
                   </a>
                 </span>

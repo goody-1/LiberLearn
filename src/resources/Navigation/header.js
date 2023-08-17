@@ -2,6 +2,7 @@ import React from 'react';
 import './header.css';
 import logo from '../Image/Logo & Mark Dark.png'
 import Button from "../Navigation/button";
+import * as routes from "../../utils/appRoutes";
 
 
 function Header(props) {
@@ -14,16 +15,16 @@ function Header(props) {
         <nav>
           <ul>
             <li className={props.homeActive}>
-              <a href="/">Home</a>
+              <a href={routes.HOME}>Home</a>
             </li>
             <li className={props.aboutActive}>
-              <a href="/about-us">About us</a>
+              <a href={routes.ABOUT}>About us</a>
             </li>
             <li className={props.coursesActive}>
-              <a href="/courses">Courses</a>
+              <a href={routes.COURSES}>Courses</a>
             </li>
             <li className={props.contactActive}>
-              <a href="/#contact-us">Contact</a>
+              <a href={routes.CONTACT}>Contact</a>
             </li>
           </ul>
         </nav>
