@@ -57,6 +57,7 @@ function LessonPage() {
         </div>
 
         <LessonComponent
+          key={lesson.id}
           id={lesson.id}
           title={lesson.title}
           desc={lesson.description}
@@ -138,10 +139,22 @@ function LessonComponent(props) {
                 }
               })
               }
+
+              {props.contents.map(content => {
+                if (content.content_type === "Image") {
+                  return (
+                    <img src={content.item} alt={`depiction for ${props.title}`} />
+                  );
+                } else {
+                  return null;
+                }
+              })
+              }
             </div>
           </div>
         </div>
         <LessonsNav
+          key={module.id}
           moduleId={module.id}
           moduleSlug={module.slug}
           courseSlug={module.courseSlug}
