@@ -70,6 +70,7 @@
     color: #343131;
     position: relative;
     margin: 3px 5px;
+    line-height: 30px;
     top: -15px;
     text-align: left;
     z-index: 1;
