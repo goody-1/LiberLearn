@@ -111,12 +111,11 @@ function LessonComponent(props) {
               <div className="imageArea">
                 {props.contents.map(content => {
                   if (content.content_type === "Video") {
-                    const iframeSrc = content.item.match(/src="([^"]+)"/)[1];
                     return (
                       <iframe
                         key={content.id}
                         title={props.title}
-                        src={iframeSrc}
+                        src={content.item}
                         loading="lazy"
                         allowFullScreen
                       />
