@@ -111,12 +111,12 @@ function LessonComponent(props) {
             <div className="border">
               <div className="imageArea">
                 {props.contents.map(content => {
-                  if (content.content_type === "Video") {
+                  if (content.content_type === "video") {
                     return (
                       <iframe
                         key={content.id}
                         title={props.title}
-                        src={content.item}
+                        src={content.data}
                         loading="lazy"
                         allowFullScreen
                       />
@@ -129,10 +129,10 @@ function LessonComponent(props) {
               </div>
 
               {props.contents.map(content => {
-                if (content.content_type === "Text") {
+                if (content.content_type === "text") {
                   return (
                     <div className='lesson-text text-black'
-                      dangerouslySetInnerHTML={{ __html: content.item }} />
+                      dangerouslySetInnerHTML={{ __html: content.data }} />
                   );
                 } else {
                   return null;
@@ -141,9 +141,9 @@ function LessonComponent(props) {
               }
 
               {props.contents.map(content => {
-                if (content.content_type === "Image") {
+                if (content.content_type === "image") {
                   return (
-                    <img src={content.item} alt={`depiction for ${props.title}`} />
+                    <img src={content.data} alt={`depiction for ${props.title}`} />
                   );
                 } else {
                   return null;
