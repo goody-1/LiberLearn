@@ -8,9 +8,13 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import getModuleIdFromSlug from "./getModuleIdFromSlug";
 import { Link } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
 
 function AssessmentPage() {
   const { slug } = useParams();
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const next = searchParams.get('next');
   const [assessment, setAssessment] = useState(null);
 
   useEffect(() => {
@@ -53,6 +57,7 @@ function AssessmentPage() {
           title={assessment.title}
           desc={assessment.description}
           questions={assessment.questions}
+          next={next}
         />
       </div>
     </div>
@@ -134,7 +139,7 @@ function Assessment(props) {
             </form>
           ))
         }
-        <Link className="no-link-style" to={isModulePassed() ? `/module-passed?score=${score}` :
+        <Link className="no-link-style" to={isModulePassed() ? `/module-passed?score=${score}&next=${props.next}` :
           `/module-failed?score=${score}&retake=${encodeURIComponent(currentUrl)}`}>
           <Button buttonText="Submit" />
         </Link>

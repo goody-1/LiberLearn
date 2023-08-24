@@ -5,11 +5,14 @@ import SideBar from "../sideBar";
 import TopBar from "../topBar";
 import Button from "../Navigation/button";
 import { useLocation } from "react-router-dom";
+import { COURSES } from "../../utils/appRoutes";
 
 function AssessmentPassed() {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const score = searchParams.get('score');
+  const next = searchParams.get('next');
+  console.log(next);
 
   return (
     <div className="assessmentPassedBody">
@@ -37,9 +40,9 @@ function AssessmentPassed() {
           </div>
           <div className="btnHome">
             <Button
-              url="/student-dashboard"
+              url={`${COURSES}/${next}`}
               bgColor="rgba(46, 49, 146, 1)"
-              buttonText="Home"
+              buttonText="Next"
             />
           </div>
         </section>
