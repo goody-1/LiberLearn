@@ -23,9 +23,6 @@ function DivOne() {
           With us, education becomes more that just a classroom; it is an exploration of possibilities waiting to be
           discovered.
         </p>
-        <p>
-          Join us at empowering minds and rewriting beautiful stories for juvenile offenders.
-        </p>
         <div className="green2"></div>
         {/* <a href='#' className='getStarted'>Get Started</a>         */}
         <Button url="#" buttonText="Get Started" />
